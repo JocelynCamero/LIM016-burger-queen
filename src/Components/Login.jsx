@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from './logoHamburguesa.svg';
-import wave from './wave.svg';
-import './ComponentLogin.scss';
+import { Link } from 'react-router-dom';
+import logo from '../logoHamburguesa.svg';
+import wave from '../wave.svg';
+import '../ComponentLogin.scss';
 
 export default function Login() {
   return (
@@ -26,7 +27,9 @@ export default function Login() {
               <input className="Input" placeholder="*************" type="password" />
               <span className="MensajeError">Error</span>
             </div>
-            <button type="button" className="BtnLogin">Iniciar sesion</button>
+            <button type="button" className="BtnLogin">
+              <Link to="MenuMesero">Iniciar Sesion</Link>
+            </button>
           </div>
         </div>
       </div>
