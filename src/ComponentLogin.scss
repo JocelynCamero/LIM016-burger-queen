@@ -1,0 +1,103 @@
+// Vista Login
+.Login {
+display: flex;
+flex-direction: column;
+background-color: #252836;
+width: 100vw;
+height: 100vh;
+}
+
+// Contenedor del wave
+.div1{
+    width: 100vw;
+    height: 15vh;
+}
+
+// Contenedor logo y formulario
+.div2{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 85vh;
+}
+
+// Div donde se encuentra el logo con el nombre
+.LogoEmpresa {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+// Logo
+.LogoImg {
+    width: 80%;
+}
+
+// Div donde se encuentra el formulario
+.Datos {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+// Div del formulario
+.Form {
+    width: 75%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #ffffff30;
+    backdrop-filter: blur(50px);
+}
+
+.Grupo{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+// Etiquetas de correo y contraseña
+.Texto {
+    color: #1F1D2B;
+    font-size: 28px;
+}
+
+// Inputs
+.Input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #1F1D2B;
+    outline: 0px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+::placeholder{
+    color: white;
+}
+
+// Mensaje de error
+.MensajeError{
+    color: #1F1D2B;
+    font-weight: bold;
+}
+
+// Boton de iniciar sesion
+.BtnLogin {
+    width: 60%;
+    height: 8%;
+    background: #EA7C69;
+    border-radius: 15px;
+    color: white;
+    margin-top: 40px;
+    font-size: 24px;
+    border: none;
+}
