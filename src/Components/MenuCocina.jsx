@@ -12,6 +12,7 @@ export default function viewMenuCocina() {
           <i />
         </div>
         <div>
+          <Link to="/MenuMesero">Mesero</Link>
           <i />
         </div>
       </nav>

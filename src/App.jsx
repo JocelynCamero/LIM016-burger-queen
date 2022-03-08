@@ -1,26 +1,21 @@
-import React, { useEffect } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
+import React from 'react';
 import {
-  Router,
-  Switch,
+  Routes,
   Route,
-  Link,
 } from 'react-router-dom';
+import MenuMesero from './Components/MenuMesero';
+import MenuCocina from './Components/MenuCocina';
+import Login from './Components/Login';
+// import your route components too
 
-import { db } from './firebase/firebaseConfig';
-
-function App() {
-  useEffect(() => {
-    const obtenerDatos = async () => {
-      const datos = await getDocs(collection(db, 'usuarios'));
-      datos.forEach((documento) => {
-        console.log(documento.data());
-      });
-    };
-    obtenerDatos();
-  }, []);
+export default function App() {
   return (
-    <h1>firebase</h1>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="MenuCocina" element={<MenuCocina />} />
+        <Route path="MenuMesero" element={<MenuMesero />} />
+      </Routes>
+    </div>
   );
 }
-export default App;
