@@ -12,7 +12,7 @@ export default function viewMenu() {
           <i />
         </div>
         <div>
-          <i />
+          <Link to="MenuCocina">Mesero</Link>
         </div>
       </nav>
       <div />
