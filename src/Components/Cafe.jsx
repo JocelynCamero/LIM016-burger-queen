@@ -5,6 +5,3 @@ export default function Cafe() {
     <h2>Selecciona cafe</h2>
   );
 }
-
-
-
