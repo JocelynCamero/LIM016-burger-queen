@@ -15,22 +15,12 @@ export default function Login() {
     const correo = correoRef.current.value;
     const contraseña = contraRef.current.value;
 
-<<<<<<< HEAD
-    await signInWithEmailAndPassword(auth, correo, contraseña)
-      .then((userCredential) => {
-        console.log(userCredential);
-        const docRefUsers = doc(db, 'usuarios', userCredential.user.uid);
-        const docSnap = getDoc(docRefUsers).then((docc) => docc.data());
-        docSnap.then((re) => {
-          if (re.rol === 'mesero') navigate('/MenuMesero');
-=======
     signIn(correo, contraseña)
       .then((userCredential) => {
         console.log('inicio sesion');
         getUser(userCredential.user.uid).then((docu) => {
           console.log(docu.data());
-          if (docu.data().rol === 'mesero') navigate('/MenuMesero');
->>>>>>> 82f209768bb50829e1d2310df074400479ccdef4
+          if (docu.data().rol === 'mesero') navigate('/ViewMesero');
           else navigate('/MenuCocina');
         });
       })

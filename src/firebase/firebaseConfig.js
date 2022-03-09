@@ -1,5 +1,7 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import {
+  getFirestore, doc, getDoc, Timestamp,
+} from 'firebase/firestore';
 import {
   getAuth,
   onAuthStateChanged,
@@ -28,4 +30,5 @@ export {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
+  Timestamp,
 };
