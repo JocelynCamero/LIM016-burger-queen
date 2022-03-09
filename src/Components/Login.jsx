@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../logoHamburguesa.svg';
 import wave from '../wave.svg';
-import '../ComponentLogin.scss';
+import '../Styles/ComponentLogin.scss';
 
 export default function Login() {
   const navigate = useNavigate();
