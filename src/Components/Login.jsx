@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../logoHamburguesa.svg';
 import wave from '../wave.svg';
-import '../ComponentLogin.scss';
+import '../Styles/ComponentLogin.scss';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -28,9 +28,7 @@ export default function Login() {
               <input className="Input" placeholder="*************" type="password" />
               <span className="MensajeError">Error</span>
             </div>
-            <button type="button" className="BtnLogin">
-              <button type="button" className="BtnMesero" onClick={() => navigate('/MenuCocina')}>MENU</button>
-            </button>
+            <button type="button" className="BtnLogin" onClick={() => navigate('/MenuMesero')}>Iniciar Sesion</button>
           </div>
         </div>
       </div>

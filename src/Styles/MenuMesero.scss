@@ -1,0 +1,32 @@
+.MenuMesero{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.PrimerContIcono{
+    margin: 30px;
+}
+.ContCafe{
+    background-color: #252836;
+    padding: 8px;
+    margin: 30px;
+    border-radius: 8px 0px 0px 8px;
+}
+.SegundoContIcono{
+    background-color: #EA7C69;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.BarraNavegacion{
+    width: 8%;
+    height: 100vh;
+    background-color: #1F1D2B;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+

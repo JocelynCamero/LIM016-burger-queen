@@ -1,27 +1,74 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCoffee, faUser, faBurger, faBell, faArrowRightFromBracket,
+} from '@fortawesome/free-solid-svg-icons';
+import '../Styles/MenuMesero.scss';
 
 export default function viewMenu() {
   return (
-    <div className="menuMesero">
-      <nav>
-        <div>
-          <i />
-          <i />
-          <i />
-          <i />
+    <div className="MenuMesero">
+      <nav className="BarraNavegacion">
+        <div className="IconosSuperior">
+          <div className="PrimerContIcono">
+            <div>
+              <FontAwesomeIcon icon={faUser} size="2x" color="#EA7C69" />
+            </div>
+          </div>
+          <div className="ContCafe">
+            <div className="SegundoContIcono">
+              <FontAwesomeIcon icon={faCoffee} size="2x" color="white" />
+            </div>
+          </div>
+          <div className="PrimerContIcono">
+            <div>
+              <FontAwesomeIcon icon={faBurger} size="2x" color="#EA7C69" />
+            </div>
+          </div>
+          <div className="PrimerContIcono">
+            <div>
+              <FontAwesomeIcon icon={faBell} size="2x" color="#EA7C69" />
+            </div>
+          </div>
         </div>
-        <div>
-          <Link to="MenuCocina">Mesero</Link>
+        <div className="IconosInferior">
+          <div className="PrimerContIcono">
+            <div>
+              <FontAwesomeIcon icon={faArrowRightFromBracket} size="2x" color="#EA7C69" />
+            </div>
+          </div>
         </div>
       </nav>
-      <div />
       <section>
-        <div>
-          <h2>Orden N°:</h2>
-          <h3>Fecha: </h3>
+        <div className="Cabecera">
+          <div>
+            <h2>Orden N°:</h2>
+            <h3>Fecha: </h3>
+          </div>
+          <input placeholder="Buscar alimento o bebida" />
         </div>
+        <nav className="NavegacionOpcionesAlimento">
+          <ul>
+            <li><Link to="/Cafe">Cafe</Link></li>
+            <li><Link to="/Sandwich">Sandwich</Link></li>
+            <li><Link to="/JugoFrutas">Jugo de frutas</Link></li>
+            <li><Link to="/TodosDesayuno">Todos</Link></li>
+          </ul>
+        </nav>
       </section>
+      <div className="ResumenOrden">
+        <div className="CabeceraOrden">
+          <div className="DetalleOrden">
+            <h3 className="NumeroOrden">Orden N°</h3>
+            <h3 className="HoraOrden">Fecha</h3>
+          </div>
+          <div className="DetalleMesero">
+            <input className="NombreCliente" placeholder="Ingrese nombre del cliente" />
+            <input className="NumeroMesa" placeholder="Ingrese numero de mesa" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
