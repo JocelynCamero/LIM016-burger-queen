@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from '../logoHamburguesa.svg';
 import wave from '../wave.svg';
 import '../ComponentLogin.scss';
 
 export default function Login() {
+  const navigate = useNavigate();
   return (
     <div className="Login">
       <div className="div1">
@@ -28,7 +29,7 @@ export default function Login() {
               <span className="MensajeError">Error</span>
             </div>
             <button type="button" className="BtnLogin">
-              <Link to="MenuMesero">Iniciar Sesion</Link>
+              <button type="button" className="BtnMesero" onClick={() => navigate('/MenuCocina')}>MENU</button>
             </button>
           </div>
         </div>
