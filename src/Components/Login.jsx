@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-  auth, signInWithEmailAndPassword, doc, getDoc, db,
-} from '../Firebase/firebaseConfig';
+import { signIn } from '../Firebase/firebaseAuth';
+import { getUser } from '../Firebase/firebaseStore';
 import logo from '../logoHamburguesa.svg';
 import wave from '../wave.svg';
 import '../Styles/ComponentLogin.scss';
@@ -16,6 +15,7 @@ export default function Login() {
     const correo = correoRef.current.value;
     const contraseña = contraRef.current.value;
 
+<<<<<<< HEAD
     await signInWithEmailAndPassword(auth, correo, contraseña)
       .then((userCredential) => {
         console.log(userCredential);
@@ -23,6 +23,14 @@ export default function Login() {
         const docSnap = getDoc(docRefUsers).then((docc) => docc.data());
         docSnap.then((re) => {
           if (re.rol === 'mesero') navigate('/MenuMesero');
+=======
+    signIn(correo, contraseña)
+      .then((userCredential) => {
+        console.log('inicio sesion');
+        getUser(userCredential.user.uid).then((docu) => {
+          console.log(docu.data());
+          if (docu.data().rol === 'mesero') navigate('/MenuMesero');
+>>>>>>> 82f209768bb50829e1d2310df074400479ccdef4
           else navigate('/MenuCocina');
         });
       })
@@ -51,7 +59,7 @@ export default function Login() {
               <input className="Input" ref={contraRef} placeholder="*************" type="password" />
               <span className="MensajeError">Error</span>
             </div>
-            <button type="button" onClick={rolView} className="BtnLogin">Iniciar Sesion</button>
+            <button type="button" className="BtnLogin" onClick={rolView}>Iniciar Sesion</button>
           </div>
         </div>
       </div>
