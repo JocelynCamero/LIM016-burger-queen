@@ -1,16 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHardHat, faClipboard } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 export default function viewMenuCocina() {
   return (
-    <div className="MenuCocina">
-      <nav className="BarraNavegacionCocina">
-        <div className="IconoChef">
-          <FontAwesomeIcon icon={faHardHat} />
+    <div className="menuCocina">
+      <nav>
+        <div>
+          <FontAwesomeIcon icon={faCoffee} />
+          <i />
+          <i />
+          <i />
         </div>
         <div>
-          <FontAwesomeIcon icon={faClipboard} />
+          <Link to="/MenuMesero">Mesero</Link>
+          <i />
         </div>
       </nav>
       <div />

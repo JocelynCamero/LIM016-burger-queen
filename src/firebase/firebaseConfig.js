@@ -4,6 +4,7 @@ import {
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signOut,
 } from 'firebase/auth';
 
 const firebaseConfig = {
@@ -26,4 +27,5 @@ export {
   getDoc,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  signOut,
 };
