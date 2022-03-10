@@ -1,45 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faCoffee, faUser, faBurger, faBell, faArrowRightFromBracket,
-} from '@fortawesome/free-solid-svg-icons';
-import '../Styles/MenuMesero.scss';
+import BarraNavPrincipal from './BarraNavPrincipal';
 
 export default function viewMenu() {
   return (
     <div className="MenuMesero">
-      <nav className="BarraNavegacion">
-        <div className="IconosSuperior">
-          <div className="PrimerContIcono">
-            <div>
-              <FontAwesomeIcon icon={faUser} size="2x" color="#EA7C69" />
-            </div>
-          </div>
-          <div className="ContCafe">
-            <div className="SegundoContIcono">
-              <FontAwesomeIcon icon={faCoffee} size="2x" color="white" />
-            </div>
-          </div>
-          <div className="PrimerContIcono">
-            <div>
-              <FontAwesomeIcon icon={faBurger} size="2x" color="#EA7C69" />
-            </div>
-          </div>
-          <div className="PrimerContIcono">
-            <div>
-              <FontAwesomeIcon icon={faBell} size="2x" color="#EA7C69" />
-            </div>
-          </div>
-        </div>
-        <div className="IconosInferior">
-          <div className="PrimerContIcono">
-            <div>
-              <FontAwesomeIcon icon={faArrowRightFromBracket} size="2x" color="#EA7C69" />
-            </div>
-          </div>
-        </div>
-      </nav>
+      <BarraNavPrincipal />
       <section>
         <div className="Cabecera">
           <div>

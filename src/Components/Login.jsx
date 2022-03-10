@@ -12,15 +12,14 @@ export default function Login() {
   const correoRef = useRef();
   const contraRef = useRef();
 
-  const rolView = () => {
+  const rolView = async () => {
     const correo = correoRef.current.value;
     const contraseña = contraRef.current.value;
 
-    signInWithEmailAndPassword(auth, correo, contraseña)
+    await signInWithEmailAndPassword(auth, correo, contraseña)
       .then((userCredential) => {
-        const { user } = userCredential;
-
-        const docRefUsers = doc(db, 'usuarios', user.uid);
+        console.log(userCredential);
+        const docRefUsers = doc(db, 'usuarios', userCredential.user.uid);
         const docSnap = getDoc(docRefUsers).then((docc) => docc.data());
         docSnap.then((re) => {
           if (re.rol === 'mesero') navigate('/MenuMesero');
