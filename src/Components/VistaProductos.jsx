@@ -4,9 +4,10 @@ import { getProducts } from '../Firebase/firebaseStore';
 
 export default function VistaProductos() {
   const [prod, setProd] = useState([]);
-  const obtenerProductosDesayuno = async () => {
+  const [desayuno, setDesayuno] = useState('');
+  const obtenerProductosDesayuno = async (desayuno) => {
     const arrProd = [];
-    await getProducts().then((querySnapshot) => {
+    await getProducts(desayuno, 'Cafe').then((querySnapshot) => {
       querySnapshot.forEach((docu) => {
         arrProd.push(docu.data());
       });
@@ -16,10 +17,10 @@ export default function VistaProductos() {
   };
 
   useEffect(() => {
-    obtenerProductosDesayuno();
+    obtenerProductosDesayuno(desayuno);
   }, []);
 
-  console.log(prod);
+  // console.log(prod);
   return (
     <div className="VistaProductos">
       <h1>Selecciona alimentos</h1>

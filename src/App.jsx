@@ -3,11 +3,8 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import MenuMesero from './Components/MenuMesero';
-import MenuCocina from './Components/MenuCocina';
 import Login from './Components/Login';
-import Cafe from './Components/Cafe';
-import ViewMesero from './Components/ViewMesero';
+import ViewMesero from './Containers/ViewMesero';
 // import your route components too
 
 export default function App() {
@@ -16,10 +13,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="ViewMesero" element={<ViewMesero />} />
-        <Route path="MenuCocina" element={<MenuCocina />} />
-        <Route path="MenuMesero" element={<MenuMesero />}>
-          <Route path="Cafe" element={<Cafe />} />
-        </Route>
       </Routes>
     </div>
   );
