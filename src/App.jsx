@@ -6,6 +6,7 @@ import VistaMesero from './Componentes/VistaMesero';
 import Desayuno from './Componentes/Desayuno';
 import Almuerzo from './Componentes/Almuerzo';
 import Notificaciones from './Componentes/Notificaciones';
+import VistaCocina from './Componentes/VistaCocina';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/VistaMesero/Notificaciones/:categorias" element={<Notificaciones />} />
           </Route>
         </Route>
+        <Route path="/VistaCocina" element={<VistaCocina />}></Route>
       </Routes>
     </div>
   );

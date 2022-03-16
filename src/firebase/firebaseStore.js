@@ -9,7 +9,7 @@ import {
   getDocs,
 } from './firebaseConfig';
 
-export const obtenerUsuario = async (uid) => getDoc(doc(db, 'usuarios', uid));
+export const obtenerUsuario = (id) => getDoc(doc(db, 'usuarios', id)).then((docu) => docu.data());
 
 export const obtenerProductos = async (categoria, subcategoria) => {
   const q = query(collection(db, 'productos'), where('categoria', '==', categoria), where('subcategoria', '==', subcategoria));

@@ -6,7 +6,7 @@ import { iniciarSesion } from '../Firebase/firebaseAuth';
 import { obtenerUsuario } from '../Firebase/firebaseStore';
 import logo from '../logoHamburguesa.svg';
 import wave from '../wave.svg';
-import '../Estilos/ComponentLogin.scss';
+import '../Estilos/InicioSesion.scss';
 
 export default function InicioSesion() {
   const navigate = useNavigate();
@@ -21,8 +21,8 @@ export default function InicioSesion() {
       .then((credencialUsuario) => {
         console.log('inicio sesion');
         obtenerUsuario(credencialUsuario.user.uid).then((docu) => {
-          console.log(docu.data());
-          if (docu.data().rol === 'mesero') navigate('/VistaMesero');
+          console.log(docu.rol);
+          if (docu.rol === 'mesero') navigate('/VistaMesero');
           else navigate('/VistaCocina');
         });
       })
