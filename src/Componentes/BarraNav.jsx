@@ -9,10 +9,10 @@ import '../Estilos/BarraNavPrincipal.scss';
 export default function BarraNav() {
   return (
     <div className="BarraNav">
-      <Link className="ContenedorIcono" to="/Desayuno"><FontAwesomeIcon icon={faCoffee} size="2x" color="White" /></Link>
-      <Link className="ContenedorIcono" to="/Almuerzo"><FontAwesomeIcon icon={faBurger} size="2x" color="White" /></Link>
-      <Link className="ContenedorIcono" to="/Notificaciones"><FontAwesomeIcon icon={faBell} size="2x" color="White" /></Link>
-      <Link className="ContenedorIcono" to="/InicioSesion"><FontAwesomeIcon icon={faArrowRightFromBracket} size="2x" color="White" /></Link>
+      <Link className="ContenedorIcono" to="/VistaMesero/Desayuno"><FontAwesomeIcon icon={faCoffee} size="2x" color="White" /></Link>
+      <Link className="ContenedorIcono" to="/VistaMesero/Almuerzo"><FontAwesomeIcon icon={faBurger} size="2x" color="White" /></Link>
+      <Link className="ContenedorIcono" to="/VistaMesero/Notificaciones"><FontAwesomeIcon icon={faBell} size="2x" color="White" /></Link>
+      <Link className="ContenedorIcono" to="/"><FontAwesomeIcon icon={faArrowRightFromBracket} size="2x" color="White" /></Link>
     </div>
   );
 }

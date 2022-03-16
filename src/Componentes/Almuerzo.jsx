@@ -13,7 +13,7 @@ export default function Almuerzo() {
     <div>
       <h1>Selecciona productos</h1>
       <ul>
-        { subcategoriasAlmuerzo.map((item) => <li key={item}><Link to={`/Almuerzo/${item}`}>{item}</Link></li>)}
+        { subcategoriasAlmuerzo.map((item) => <li key={item}><Link to={`/VistaMesero/Almuerzo/${item}`}>{item}</Link></li>)}
       </ul>
       <Productos />
     </div>

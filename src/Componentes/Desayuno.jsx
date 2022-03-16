@@ -11,10 +11,10 @@ export default function Desayuno() {
   ];
   return (
     <div>
-      <h1>Selecciona productos</h1>
       <ul>
-        { subcategoriasDesayuno.map((item) => <li key={item}><Link to={`/Desayuno/${item}`}>{item}</Link></li>)}
+        { subcategoriasDesayuno.map((item) => <li key={item}><Link to={`/VistaMesero/Desayuno/${item}`}>{item}</Link></li>)}
       </ul>
+      <h1>Selecciona productos</h1>
       <Productos />
     </div>
   );

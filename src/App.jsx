@@ -12,15 +12,16 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<InicioSesion />} />
-        <Route path="/VistaMesero" element={<VistaMesero />} />
-        <Route path="/Desayuno" element={<Desayuno />}>
-          <Route path="/Desayuno/:nombre" element={<Desayuno />} />
-        </Route>
-        <Route path="/Almuerzo" element={<Almuerzo />}>
-          <Route path="/Almuerzo/:nombre" element={<Almuerzo />} />
-        </Route>
-        <Route path="/Notificaciones" element={<Notificaciones />}>
-          <Route path="/Notificaciones/:categorias" element={<Notificaciones />} />
+        <Route path="/VistaMesero" element={<VistaMesero />}>
+          <Route path="/VistaMesero/Desayuno" element={<Desayuno />}>
+            <Route path="/VistaMesero/Desayuno/:nombre" element={<Desayuno />} />
+          </Route>
+          <Route path="/VistaMesero/Almuerzo" element={<Almuerzo />}>
+            <Route path="/VistaMesero/Almuerzo/:nombre" element={<Almuerzo />} />
+          </Route>
+          <Route path="/VistaMesero/Notificaciones" element={<Notificaciones />}>
+            <Route path="/VistaMesero/Notificaciones/:categorias" element={<Notificaciones />} />
+          </Route>
         </Route>
       </Routes>
     </div>

@@ -11,7 +11,7 @@ export default function Notificaciones() {
     <div>
       <h1>Pedidos pendientes de entrega</h1>
       <ul>
-        { categorias.map((item) => <li key={item}><Link to={`/Notificaciones/${item}`}>{item}</Link></li>)}
+        { categorias.map((item) => <li key={item}><Link to={`/VistaMesero/Notificaciones/${item}`}>{item}</Link></li>)}
       </ul>
       <PedidosPendientes />
     </div>
