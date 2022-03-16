@@ -1,5 +1,7 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import {
+  getFirestore, doc, getDoc, Timestamp, collection, query, where, getDocs,
+} from 'firebase/firestore';
 import {
   getAuth,
   onAuthStateChanged,
@@ -15,10 +17,11 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
   appId: process.env.REACT_APP_FIREBASE_APPID,
 };
-console.log(firebaseConfig);
+// console.log(firebaseConfig);
+
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
 export {
   db,
@@ -28,4 +31,9 @@ export {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
+  Timestamp,
+  collection,
+  query,
+  where,
+  getDocs,
 };

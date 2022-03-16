@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BarraNavPrincipal from './BarraNavPrincipal';
 
 export default function viewMenu() {
   return (
     <div className="MenuMesero">
-      <BarraNavPrincipal />
       <section>
         <div className="Cabecera">
           <div>

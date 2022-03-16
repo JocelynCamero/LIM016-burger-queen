@@ -1,24 +1,31 @@
 import React from 'react';
-import {
-  Routes,
-  Route,
-} from 'react-router-dom';
-import MenuMesero from './Components/MenuMesero';
-import MenuCocina from './Components/MenuCocina';
-import Login from './Components/Login';
-import Cafe from './Components/Cafe';
-// import your route components too
+import { Routes, Route } from 'react-router-dom';
+import './App.scss';
+import InicioSesion from './Componentes/InicioSesion';
+import VistaMesero from './Componentes/VistaMesero';
+import Desayuno from './Componentes/Desayuno';
+import Almuerzo from './Componentes/Almuerzo';
+import Notificaciones from './Componentes/Notificaciones';
 
-export default function App() {
+function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="MenuCocina" element={<MenuCocina />} />
-        <Route path="MenuMesero" element={<MenuMesero />}>
-          <Route path="Cafe" element={<Cafe />} />
+        <Route path="/" element={<InicioSesion />} />
+        <Route path="/VistaMesero" element={<VistaMesero />}>
+          <Route path="/VistaMesero/Desayuno" element={<Desayuno />}>
+            <Route path="/VistaMesero/Desayuno/:nombre" element={<Desayuno />} />
+          </Route>
+          <Route path="/VistaMesero/Almuerzo" element={<Almuerzo />}>
+            <Route path="/VistaMesero/Almuerzo/:nombre" element={<Almuerzo />} />
+          </Route>
+          <Route path="/VistaMesero/Notificaciones" element={<Notificaciones />}>
+            <Route path="/VistaMesero/Notificaciones/:categorias" element={<Notificaciones />} />
+          </Route>
         </Route>
       </Routes>
     </div>
   );
 }
+
+export default App;

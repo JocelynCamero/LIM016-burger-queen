@@ -1,5 +1,5 @@
 // Vista Login
-.Login {
+.InicioSesion {
 display: flex;
 flex-direction: column;
 background-color: #252836;
@@ -8,13 +8,13 @@ height: 100vh;
 }
 
 // Contenedor del wave
-.div1{
+.ContenedorWave{
     width: 100vw;
     height: 15vh;
 }
 
 // Contenedor logo y formulario
-.div2{
+.ContenedorLogo{
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -84,14 +84,8 @@ height: 100vh;
     color: white;
 }
 
-// Mensaje de error
-.MensajeError{
-    color: #1F1D2B;
-    font-weight: bold;
-}
-
 // Boton de iniciar sesion
-.BtnLogin {
+.BtnInciarSesion {
     width: 60%;
     height: 8%;
     background: #EA7C69;
