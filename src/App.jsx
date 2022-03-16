@@ -1,19 +1,30 @@
 import React from 'react';
-import {
-  Routes,
-  Route,
-} from 'react-router-dom';
-import Login from './Components/Login';
-import ViewMesero from './Containers/ViewMesero';
-// import your route components too
+import { Routes, Route } from 'react-router-dom';
+import './App.scss';
+import InicioSesion from './Componentes/InicioSesion';
+import VistaMesero from './Componentes/VistaMesero';
+import Desayuno from './Componentes/Desayuno';
+import Almuerzo from './Componentes/Almuerzo';
+import Notificaciones from './Componentes/Notificaciones';
 
-export default function App() {
+function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="ViewMesero" element={<ViewMesero />} />
+        <Route path="/" element={<InicioSesion />} />
+        <Route path="/VistaMesero" element={<VistaMesero />} />
+        <Route path="/Desayuno" element={<Desayuno />}>
+          <Route path="/Desayuno/:nombre" element={<Desayuno />} />
+        </Route>
+        <Route path="/Almuerzo" element={<Almuerzo />}>
+          <Route path="/Almuerzo/:nombre" element={<Almuerzo />} />
+        </Route>
+        <Route path="/Notificaciones" element={<Notificaciones />}>
+          <Route path="/Notificaciones/:categorias" element={<Notificaciones />} />
+        </Route>
       </Routes>
     </div>
   );
 }
+
+export default App;

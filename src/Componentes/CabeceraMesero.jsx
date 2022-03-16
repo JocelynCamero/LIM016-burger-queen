@@ -3,7 +3,7 @@ import React from 'react';
 export default function CabeceraMesero(props) {
   const { nombreMesero, fecha } = props;
   return (
-    <div>
+    <div className="CabeceraMesero">
       <div>
         <h1>
           {nombreMesero}

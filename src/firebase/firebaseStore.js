@@ -9,9 +9,9 @@ import {
   getDocs,
 } from './firebaseConfig';
 
-export const getUser = async (uid) => getDoc(doc(db, 'usuarios', uid));
+export const obtenerUsuario = async (uid) => getDoc(doc(db, 'usuarios', uid));
 
-export const getProducts = async (categoria, subcategoria) => {
+export const obtenerProductos = async (categoria, subcategoria) => {
   const q = query(collection(db, 'productos'), where('categoria', '==', categoria), where('subcategoria', '==', subcategoria));
   const querySnapshot = await getDocs(q);
   /* querySnapshot.forEach((docu) => {
@@ -21,7 +21,7 @@ export const getProducts = async (categoria, subcategoria) => {
 };
 // collection(db, 'productos');
 
-export const getDate = () => {
+export const obtenerFecha = () => {
   const fecha = Timestamp.fromDate(new Date()).toDate().toDateString();
   return fecha;
 };

@@ -4,6 +4,6 @@ import {
   signOut,
 } from './firebaseConfig';
 
-export const signIn = (email, password) => signInWithEmailAndPassword(auth, email, password);
+export const iniciarSesion = (correo, clave) => signInWithEmailAndPassword(auth, correo, clave);
 
-export const signOutAccount = () => signOut(auth);
+export const cerrarSesion = () => signOut(auth);
