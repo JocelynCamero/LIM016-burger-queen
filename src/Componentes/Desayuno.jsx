@@ -10,7 +10,7 @@ export default function Desayuno() {
     'Todos',
   ];
   return (
-    <div>
+    <div className="Desayuno">
       <ul>
         { subcategoriasDesayuno.map((item) => <li key={item}><Link to={`/VistaMesero/Desayuno/${item}`}>{item}</Link></li>)}
       </ul>

@@ -13,7 +13,7 @@ export default function CabeceraMesero(props) {
         </h4>
       </div>
       <div>
-        <input />
+        <input className="barraBusqueda" placeholder="Buscar alimento o bebida" />
       </div>
     </div>
   );

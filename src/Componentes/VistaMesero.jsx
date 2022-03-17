@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import BarraNav from './BarraNav';
 import CabeceraMesero from './CabeceraMesero';
-
+import '../Estilos/VistaMesero.scss';
 export default function VistaMesero() {
   return (
     <div className="VistaMesero">
