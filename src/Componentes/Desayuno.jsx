@@ -6,7 +6,7 @@ export default function Desayuno() {
   const subcategoriasDesayuno = [
     'Cafe',
     'Sandwich',
-    'Jugos de fruta',
+    'Jugo',
     'Todos',
   ];
   return (
@@ -15,7 +15,7 @@ export default function Desayuno() {
         { subcategoriasDesayuno.map((item) => <li key={item}><Link to={`/VistaMesero/Desayuno/${item}`}>{item}</Link></li>)}
       </ul>
       <h1>Selecciona productos</h1>
-      <Productos />
+      <Productos categoria="Desayuno" />
     </div>
   );
 }

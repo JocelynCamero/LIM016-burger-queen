@@ -15,13 +15,13 @@ function App() {
         <Route path="/" element={<InicioSesion />} />
         <Route path="/VistaMesero" element={<VistaMesero />}>
           <Route path="/VistaMesero/Desayuno" element={<Desayuno />}>
-            <Route path="/VistaMesero/Desayuno/:nombre" element={<Desayuno />} />
+            <Route path="/VistaMesero/Desayuno/:subcategoriaUrl" element={<Desayuno />} />
           </Route>
           <Route path="/VistaMesero/Almuerzo" element={<Almuerzo />}>
-            <Route path="/VistaMesero/Almuerzo/:nombre" element={<Almuerzo />} />
+            <Route path="/VistaMesero/Almuerzo/:subcategoriaUrl" element={<Almuerzo />} />
           </Route>
           <Route path="/VistaMesero/Notificaciones" element={<Notificaciones />}>
-            <Route path="/VistaMesero/Notificaciones/:categorias" element={<Notificaciones />} />
+            <Route path="/VistaMesero/Notificaciones/:subcategoriaUrl" element={<Notificaciones />} />
           </Route>
         </Route>
         <Route path="/VistaCocina" element={<VistaCocina />} />

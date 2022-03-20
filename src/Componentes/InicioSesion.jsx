@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { iniciarSesion } from '../Firebase/firebaseAuth';
 import { obtenerUsuario } from '../Firebase/firebaseStore';
 import logo from '../logoHamburguesa.svg';
@@ -40,7 +40,7 @@ export default function InicioSesion() {
         </div>
         <div className="Datos">
           <form className="Form">
-            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon className="IconoUsuario" icon={faUserCircle} size="8x" color="#252836" />
             <div className="Grupo">
               <p className="Texto">Correo</p>
               <input className="Input" ref={correoRef} placeholder="exaple@example.com" type="email" />
