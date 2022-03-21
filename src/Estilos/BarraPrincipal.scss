@@ -1,16 +1,6 @@
-.VistaMesero{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-.PrimerContIcono{
-    margin: 30px;
-}
-
-.BarraNav{
-    width: 3%;
-    height: 100vh;
+.BarraPrincipalMesero{
+    width: 2%;
+    height: 93vh;
     background-color: #1F1D2B;
     border-radius: 10px;
     display: flex;
@@ -20,7 +10,7 @@
     padding: 30px;
 }
 .Icono{
-    size: 150%;
+    size: 130%;
 }
 
 .ContenedorIcono{

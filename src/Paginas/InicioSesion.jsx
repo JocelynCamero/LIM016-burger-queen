@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { iniciarSesion } from '../Firebase/firebaseAuth';
 import { obtenerUsuario } from '../Firebase/firebaseStore';
-import logo from '../logoHamburguesa.svg';
-import wave from '../wave.svg';
+import logo from '../Imagenes/logoHamburguesa.svg';
 import '../Estilos/InicioSesion.scss';
 
 export default function InicioSesion() {
@@ -31,9 +30,6 @@ export default function InicioSesion() {
 
   return (
     <div className="InicioSesion">
-      <div className="ContenedorWave">
-        <img src={wave} alt="" className="wave" />
-      </div>
       <div className="ContenedorLogo">
         <div className="LogoEmpresa">
           <img src={logo} alt="" className="LogoImg" />

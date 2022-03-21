@@ -1,0 +1,23 @@
+// Variables
+$color_azul_oscuro: #1F1D2B;
+$color_azul_claro: #252836;
+$color_coral: #EA7C69;
+$color_placeholder: #ABBBC2;
+$color_blanco: #FFFFFF;
+$color_anular: #FF7CA3;
+
+.Notificaciones{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $color_azul_claro;
+}
+.contenedorOrdenes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    height: 600px;
+}

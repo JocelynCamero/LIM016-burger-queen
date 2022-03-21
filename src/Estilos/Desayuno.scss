@@ -1,0 +1,28 @@
+// Variables
+$color_azul_oscuro: #1F1D2B;
+$color_azul_claro: #252836;
+$color_coral: #EA7C69;
+$color_placeholder: #ABBBC2;
+$color_blanco: #FFFFFF;
+$color_anular: #FF7CA3;
+
+.Desayuno, .Almuerzo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: $color_azul_claro;
+}
+.menu{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.contenedorProductos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    height: 600px;
+}
