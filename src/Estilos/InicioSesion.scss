@@ -1,17 +1,18 @@
+// Variables
+$color_azul_oscuro: #1F1D2B;
+$color_azul_claro: #252836;
+$color_coral: #EA7C69;
+$color_placeholder: #ABBBC2;
+$color_blanco: #FFFFFF;
+$color_anular: #FF7CA3;
 
 // Componente InicioSesion
 .InicioSesion {
 display: flex;
 flex-direction: column;
-background-color: #252836;
+background-color: $color_azul_claro;
 width: 100vw;
 height: 100vh;
-}
-
-// Contenedor del wave
-.ContenedorWave{
-    width: 100vw;
-    height: 15vh;
 }
 
 // Contenedor logo y formulario
@@ -59,39 +60,43 @@ height: 100vh;
     backdrop-filter: blur(50px);
 }
 
+// Div de grupo de etiqueta e input
 .Grupo{
-    width: 60%;
+    width: 70%;
     display: flex;
     flex-direction: column;
+
+    // Etiquetas de correo y contraseña
+   .Texto {
+        color: $color_azul_oscuro;
+        font-size: 28px;
+    }
+    
+    // Inputs
+    .Input {
+        background: none;
+        border: none;
+        border-bottom: 2px solid $color_azul_oscuro;
+        outline: 0px;
+        margin-bottom: 8px;
+        font-size: 22px;
+        color: $color_blanco;
+        text-align: center;
+    }
 }
 
-// Etiquetas de correo y contraseña
-.Texto {
-    color: #1F1D2B;
-    font-size: 28px;
-}
-
-// Inputs
-.Input {
-    background: none;
-    border: none;
-    border-bottom: 1px solid #1F1D2B;
-    outline: 0px;
-    margin-bottom: 8px;
-    font-size: 20px;
-}
-
+// Placeholder
 ::placeholder{
-    color: white;
+    color: $color_placeholder;
 }
 
 // Boton de iniciar sesion
 .BtnInciarSesion {
     width: 60%;
     height: 8%;
-    background: #EA7C69;
+    background: $color_coral;
     border-radius: 15px;
-    color: white;
+    color: $color_blanco;
     margin-top: 40px;
     font-size: 24px;
     border: none;

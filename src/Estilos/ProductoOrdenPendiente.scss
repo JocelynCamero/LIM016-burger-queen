@@ -1,0 +1,16 @@
+.ProductoOrdenPendiente{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.productoDetalle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.texto{
+    margin: 0;
+}

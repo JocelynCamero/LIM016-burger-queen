@@ -1,37 +1,8 @@
-
-.VistaMesero {
+.VistaMesero, .VistaCocina  {
     display: flex;
     flex-direction: row;
     background: #252836;
     color: aliceblue;
-    position: relative;
-
-}
-
-
-.BarraBusqueda {
-
-    background: #2D303E;
-    border: 1px solid #393C49;
-    box-sizing: border-box;
-    border-radius: 8px;
-    position: static;
-    width: 209px;
-    height: 48px;
-    left: 393px;
-    top: 8.5px;
-    
-
-}
-
-.CabeceraMesero{
-    position: absolute;
-    left: 30px;
-    width: 70%;
-    height: 65px;
-    top: 40px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
+    width: 1194px;
+    height: 900px;
 }

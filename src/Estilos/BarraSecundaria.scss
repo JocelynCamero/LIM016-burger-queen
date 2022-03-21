@@ -1,0 +1,34 @@
+// Variables
+$color_azul_oscuro: #1F1D2B;
+$color_azul_claro: #252836;
+$color_coral: #EA7C69;
+$color_placeholder: #ABBBC2;
+$color_blanco: #FFFFFF;
+$color_anular: #FF7CA3;
+
+
+.BarraSecundaria{
+  margin-top: 15px;
+    width: auto;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: stretch;
+  width: auto;
+  list-style: none;
+}
+ 
+li{
+ margin: 0 15px;
+ text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: $color_blanco;
+    font-family: 'Barlow', sans-serif;
+    font-size: 21px;
+}

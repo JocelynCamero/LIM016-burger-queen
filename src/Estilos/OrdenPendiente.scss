@@ -1,0 +1,47 @@
+// Variables
+$color_azul_oscuro: #1F1D2B;
+$color_azul_claro: #252836;
+$color_coral: #EA7C69;
+$color_placeholder: #ABBBC2;
+$color_blanco: #FFFFFF;
+$color_anular: #FF7CA3;
+
+.OrdenPendiente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    background-color: $color_azul_oscuro;
+    margin: 2rem 1rem 2rem 1rem;
+    border-radius: 16px;
+}
+
+.ordenMesero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.negrita{
+    color:$color_coral;
+}
+
+.btnEntregar{
+    background-color: $color_coral;
+    color: $color_blanco;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 19px;
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+}
+
+.contenedorProductosPendientes{
+    width: 100%;
+}

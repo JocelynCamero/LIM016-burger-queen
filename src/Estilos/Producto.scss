@@ -1,0 +1,74 @@
+// Variables
+$color_azul_oscuro: #1F1D2B;
+$color_azul_claro: #252836;
+$color_coral: #EA7C69;
+$color_placeholder: #ABBBC2;
+$color_blanco: #FFFFFF;
+$color_anular: #FF7CA3;
+
+.Producto{
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    width: 40%;
+    background-color: $color_azul_oscuro;
+    margin: 2rem 1rem 2rem 1rem;
+}
+
+.contenedorImagenProducto{
+    top: -30px;
+    position: relative;
+}
+
+.imgProducto{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.datosProducto{
+    position: relative;
+    top: -30px;
+}
+
+.contenedorCantidad{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cantidad{
+    font-size: 19px;
+}
+
+.btnDisminuir, .btnAumentar{
+    width: 5px;
+    border: none;
+    background-color: transparent;
+    color: $color_blanco;
+}
+
+.nombreProducto{
+    font-size: 19px;
+    font-weight: 500;
+    font-family: 'Barlow', sans-serif;
+}
+
+.precioProducto{
+    font-size: 19px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.btnAgregar{
+    background-color: $color_coral;
+    color: $color_blanco;
+    border-radius: 5px;
+    width: auto;
+    height: 30px;
+    border: none;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 19px;
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+}

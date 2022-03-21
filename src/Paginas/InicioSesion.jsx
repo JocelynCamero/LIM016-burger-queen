@@ -1,11 +1,10 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { iniciarSesion } from '../firebase/firebaseAuth';
-import { obtenerUsuario } from '../firebase/firebaseStore';
-import logo from '../logoHamburguesa.svg';
-import wave from '../wave.svg';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { iniciarSesion } from '../Firebase/firebaseAuth';
+import { obtenerUsuario } from '../Firebase/firebaseStore';
+import logo from '../Imagenes/logoHamburguesa.svg';
 import '../Estilos/InicioSesion.scss';
 
 export default function InicioSesion() {
@@ -31,16 +30,13 @@ export default function InicioSesion() {
 
   return (
     <div className="InicioSesion">
-      <div className="ContenedorWave">
-        <img src={wave} alt="" className="wave" />
-      </div>
       <div className="ContenedorLogo">
         <div className="LogoEmpresa">
           <img src={logo} alt="" className="LogoImg" />
         </div>
         <div className="Datos">
           <form className="Form">
-            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon className="IconoUsuario" icon={faUserCircle} size="8x" color="#252836" />
             <div className="Grupo">
               <p className="Texto">Correo</p>
               <input className="Input" ref={correoRef} placeholder="exaple@example.com" type="email" />
