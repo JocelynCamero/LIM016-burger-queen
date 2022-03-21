@@ -1,11 +1,11 @@
 import React from 'react';
-import '../Estilos/CabeceraMesero.scss';
+import '../Estilos/CabeceraUsuario.scss';
 
-export default function CabeceraMesero() {
+export default function CabeceraUsuario() {
   return (
-    <div className="CabeceraMesero">
+    <div className="CabeceraUsuario">
       <div className="contenedorUsuarioFecha">
-        <h1 className="nombreMesero">
+        <h1 className="nombreUsuario">
           Pepito
         </h1>
         <h3 className="fecha">
