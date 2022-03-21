@@ -1,13 +1,11 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
-import BarraPrincipalCocina from '../Componentes/BarraPrincipalCocina';
-import '../Estilos/VistaMesero.scss';
+import BarraPrincipal from '../Componentes/BarraPrincipal';
 
 export default function VistaCocina() {
   return (
-    <div className="VistaCocina">
-      <BarraPrincipalCocina />
-      <Outlet />
+    <div>
+      <p>Hola cocina</p>
+      <BarraPrincipal vista="VistaCocina" />
     </div>
   );
 }

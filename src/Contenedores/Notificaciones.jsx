@@ -1,5 +1,5 @@
 import React from 'react';
-import CabeceraMesero from '../Componentes/CabeceraMesero';
+import CabeceraMesero from '../Componentes/CabeceraUsuario';
 import BarraSecundaria from '../Componentes/BarraSecundaria';
 import OrdenPendiente from '../Componentes/OrdenPendiente';
 import '../Estilos/Notificaciones.scss';

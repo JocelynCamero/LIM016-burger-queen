@@ -1,12 +1,12 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import BarraPrincipalMesero from '../Componentes/BarraPrincipalMesero';
+import BarraPrincipal from '../Componentes/BarraPrincipal';
 import '../Estilos/VistaMesero.scss';
 
 export default function VistaMesero() {
   return (
     <div className="VistaMesero">
-      <BarraPrincipalMesero />
+      <BarraPrincipal vista="VistaMesero" />
       <Outlet />
     </div>
   );

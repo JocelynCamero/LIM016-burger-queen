@@ -31,23 +31,21 @@ export default function InicioSesion() {
   return (
     <div className="InicioSesion">
       <div className="ContenedorLogo">
-        <div className="LogoEmpresa">
-          <img src={logo} alt="" className="LogoImg" />
-        </div>
-        <div className="Datos">
-          <form className="Form">
-            <FontAwesomeIcon className="IconoUsuario" icon={faUserCircle} size="8x" color="#252836" />
-            <div className="Grupo">
-              <p className="Texto">Correo</p>
-              <input className="Input" ref={correoRef} placeholder="exaple@example.com" type="email" />
-            </div>
-            <div className="Grupo">
-              <p className="Texto">Contraseña</p>
-              <input className="Input" ref={contraRef} placeholder="*************" type="password" />
-            </div>
-            <button type="button" className="BtnInciarSesion" onClick={validarRol}>Iniciar Sesion</button>
-          </form>
-        </div>
+        <img src={logo} alt="" className="LogoImg" />
+      </div>
+      <div className="Datos">
+        <form className="Form">
+          <FontAwesomeIcon className="IconoUsuario" icon={faUserCircle} size="8x" color="#252836" />
+          <div className="Grupo">
+            <p className="Texto">Correo</p>
+            <input className="Input" ref={correoRef} placeholder="exaple@example.com" type="email" />
+          </div>
+          <div className="Grupo">
+            <p className="Texto">Contraseña</p>
+            <input className="Input" ref={contraRef} placeholder="*************" type="password" />
+          </div>
+          <button type="button" className="BtnInciarSesion" onClick={validarRol}>Iniciar Sesion</button>
+        </form>
       </div>
     </div>
   );

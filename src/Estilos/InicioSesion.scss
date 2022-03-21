@@ -1,7 +1,7 @@
 // Variables
 $color_azul_oscuro: #1F1D2B;
 $color_azul_claro: #252836;
-$color_coral: #EA7C69;
+$color_coral: rgb(63, 170, 134);
 $color_placeholder: #ABBBC2;
 $color_blanco: #FFFFFF;
 $color_anular: #FF7CA3;
@@ -9,28 +9,19 @@ $color_anular: #FF7CA3;
 // Componente InicioSesion
 .InicioSesion {
 display: flex;
-flex-direction: column;
+flex-direction: row;
 background-color: $color_azul_claro;
 width: 100vw;
 height: 100vh;
+justify-content: center;
 }
 
 // Contenedor logo y formulario
 .ContenedorLogo{
     display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 85vh;
-}
-
-// Div donde se encuentra el logo con el nombre
-.LogoEmpresa {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 50px;
+    justify-content: center;
+    width: 50vw;
+    height: 100vh;
 }
 
 // Logo
