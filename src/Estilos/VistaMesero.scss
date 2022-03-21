@@ -3,13 +3,13 @@
     display: flex;
     flex-direction: row;
     background: #252836;
-    margin-left: 2rem;
     color: aliceblue;
+    position: relative;
 
 }
 
 
-.barraBusqueda {
+.BarraBusqueda {
 
     background: #2D303E;
     border: 1px solid #393C49;
@@ -24,12 +24,14 @@
 
 }
 
-.cabeceraMesero{
+.CabeceraMesero{
     position: absolute;
-    width: 614px;
+    left: 30px;
+    width: 70%;
     height: 65px;
-    left: 128px;
-    top: 20px;
-
+    top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 
 }

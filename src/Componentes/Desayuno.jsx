@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Productos from './Productos';
+import '../Estilos/Desayuno.scss';
 
 export default function Desayuno() {
   const subcategoriasDesayuno = [
@@ -14,8 +15,11 @@ export default function Desayuno() {
       <ul>
         { subcategoriasDesayuno.map((item) => <li key={item}><Link to={`/VistaMesero/Desayuno/${item}`}>{item}</Link></li>)}
       </ul>
-      <h1>Selecciona productos</h1>
+      <div className="SeleccionaProductos">
+        <h1>Selecciona productos</h1>
+      </div>
       <Productos />
     </div>
   );
 }
+

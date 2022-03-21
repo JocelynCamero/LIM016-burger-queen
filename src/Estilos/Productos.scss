@@ -1,0 +1,22 @@
+.Productos{
+   position: absolute;
+   display: flex;
+   flex-wrap: wrap;
+   top: 200px;
+   left: 120px;
+   width: 50%;
+   height: 70%;
+   justify-content: space-around;
+   
+
+}
+
+.contenedorProductos{
+    width: 174px;
+    height: 261px;
+    background-color: #1F1D2B;
+    border-radius: 16px;
+    top: 20px;
+}
+
+

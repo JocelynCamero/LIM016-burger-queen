@@ -1,12 +1,29 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import '../Estilos/Productos.scss';
 
 export default function Productos() {
   const { nombre } = useParams();
   return (
-    <div>
-      <h1>Productos</h1>
-      {nombre}
+    <div className="Productos">
+      <div className="contenedorProductos">
+        {nombre}
+      </div>
+      <div className="contenedorProductos">
+        {nombre}
+      </div>
+      <div className="contenedorProductos">
+        {nombre}
+      </div>
+      <div className="contenedorProductos">
+        {nombre}
+      </div>
+      <div className="contenedorProductos">
+        {nombre}
+      </div>
+      <div className="contenedorProductos">
+        {nombre}
+      </div>
     </div>
   );
 }
