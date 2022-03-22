@@ -16,7 +16,7 @@ export default function ProductoOrden() {
       </div>
       <p className="orden-cantidadProductoAgregado">3</p>
       <p className="orden-subototatProductoAgregado">S/. 30</p>
-      <FontAwesomeIcon>{faTrashCan}</FontAwesomeIcon>
+      <FontAwesomeIcon className="IconoDsiminuir" icon={faTrashCan} size="lg" color="#EA7C69" />
     </div>
   );
 }
