@@ -19,8 +19,9 @@ function App() {
           <Route path="/VistaMesero/Almuerzo" element={<Almuerzo />} />
           <Route path="/VistaMesero/Notificaciones" element={<Notificaciones />} />
         </Route>
-        <Route path="/VistaCocina" element={<VistaCocina />} />
-        <Route path="/VistaMesero/Desayuno" element={<Cocina />} />
+        <Route path="/VistaCocina" element={<VistaCocina />}>
+          <Route path="/VistaCocina/Cocina" element={<Cocina />} />
+        </Route>
       </Routes>
     </div>
   );

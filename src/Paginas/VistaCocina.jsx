@@ -1,11 +1,12 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import BarraPrincipal from '../Componentes/BarraPrincipal';
 
 export default function VistaCocina() {
   return (
-    <div>
-      <p>Hola cocina</p>
+    <div className="VistaCocina">
       <BarraPrincipal vista="VistaCocina" />
+      <Outlet />
     </div>
   );
 }
