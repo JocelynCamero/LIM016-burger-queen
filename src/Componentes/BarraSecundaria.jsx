@@ -5,8 +5,8 @@ import '../Estilos/BarraSecundaria.scss';
 export default function BarraSecundaria({ cat, SetCurrentMenu }) {
   const cambiarSubcategoriasDesayuno = (categoria) => {
     let subcategorias = [];
-    if (categoria === 'Desayuno') subcategorias = ['Cafe', 'Sandwich', 'Jugos', 'Todos'];
-    if (categoria === 'Almuerzo') subcategorias = ['Hamburguesa', 'Bebidas', 'Acompañamientos', 'Todos'];
+    if (categoria === 'Desayuno') subcategorias = ['Cafe', 'Sandwich', 'Jugos'];
+    if (categoria === 'Almuerzo') subcategorias = ['Hamburguesa', 'Bebidas', 'Acompañamientos'];
     if (categoria === 'Notificaciones') subcategorias = ['Desayunos', 'Almuerzos'];
     return subcategorias;
   };

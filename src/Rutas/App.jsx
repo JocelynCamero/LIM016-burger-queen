@@ -7,20 +7,28 @@ import VistaCocina from '../Paginas/VistaCocina';
 import Desayuno from '../Contenedores/Desayuno';
 import Almuerzo from '../Contenedores/Almuerzo';
 import Notificaciones from '../Contenedores/Notificaciones';
+import Cocina from '../Contenedores/Cocina';
+import AppContext from '../Context/AppContext';
+import useInitialState from '../Hooks/useInitialState';
 
 function App() {
+  const initialState = useInitialState();
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<InicioSesion />} />
-        <Route path="/VistaMesero" element={<VistaMesero />}>
-          <Route path="/VistaMesero/Desayuno" element={<Desayuno />} />
-          <Route path="/VistaMesero/Almuerzo" element={<Almuerzo />} />
-          <Route path="/VistaMesero/Notificaciones" element={<Notificaciones />} />
-        </Route>
-        <Route path="/VistaCocina" element={<VistaCocina />} />
-      </Routes>
-    </div>
+    <AppContext.Provider value={initialState}>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<InicioSesion />} />
+          <Route path="/VistaMesero" element={<VistaMesero />}>
+            <Route path="/VistaMesero/Desayuno" element={<Desayuno />} />
+            <Route path="/VistaMesero/Almuerzo" element={<Almuerzo />} />
+            <Route path="/VistaMesero/Notificaciones" element={<Notificaciones />} />
+          </Route>
+          <Route path="/VistaCocina" element={<VistaCocina />}>
+            <Route path="/VistaCocina/Cocina" element={<Cocina />} />
+          </Route>
+        </Routes>
+      </div>
+    </AppContext.Provider>
   );
 }
 

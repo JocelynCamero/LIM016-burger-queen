@@ -1,8 +1,17 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import ProductoOrdenPendiente from './ProductoOrdenPendiente';
 import '../Estilos/OrdenPendiente.scss';
 
 export default function OrdenPendiente() {
+  const cambiarNombreBoton = () => {
+    const { vista } = useParams();
+    let nombreBoton;
+    if (vista === 'VistaMesero') nombreBoton = 'Entregar';
+    if (vista === 'Cocina') nombreBoton = 'Preparar';
+    return nombreBoton;
+  };
+
   return (
     <div className="OrdenPendiente">
       <div className="ordenMesero">
@@ -24,7 +33,7 @@ export default function OrdenPendiente() {
         <ProductoOrdenPendiente />
         <ProductoOrdenPendiente />
       </div>
-      <button type="button" className="btnEntregar">Entregar</button>
+      <button type="button" className="btnEntregar">{cambiarNombreBoton}</button>
     </div>
   );
 }
