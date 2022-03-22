@@ -21,7 +21,7 @@ export default function InicioSesion() {
         console.log('inicio sesion');
         obtenerUsuario(credencialUsuario.user.uid).then((docu) => {
           console.log(docu.rol);
-          if (docu.rol === 'mesero') navigate('/VistaMesero');
+          if (docu.rol === 'Mesero') navigate('/VistaMesero');
           else navigate('/VistaCocina');
         });
       })
