@@ -14,13 +14,14 @@ export default function BarraSecundaria({ cat, SetCurrentMenu }) {
   const HandleMenu = (e) => {
     const currentMenu = e.target.value;
     console.log(currentMenu);
+
     return SetCurrentMenu(currentMenu);
   };
   // const obtenerNombreSubcategoria = (nombreSucat) => console.log(nombreSucat);
   return (
     <div className="BarraSecundaria">
       <ul className="listaSubcategorias">
-        {cambiarSubcategoriasDesayuno(cat).map((i) => <button type="button" key={i} value={i} onClick={(e) => HandleMenu(e)}>{i}</button>)}
+        {cambiarSubcategoriasDesayuno(cat).map((i) => <button className="subCategoria" type="button" key={i} value={i} onClick={(e) => HandleMenu(e)}>{i}</button>)}
       </ul>
     </div>
   );

@@ -1,7 +1,7 @@
 // Variables
 $color_azul_oscuro: #1F1D2B;
 $color_azul_claro: #252836;
-$color_coral: #EA7C69;
+$color_verde: #3FAA86;
 $color_placeholder: #ABBBC2;
 $color_blanco: #FFFFFF;
 $color_anular: #FF7CA3;
@@ -24,11 +24,11 @@ $color_anular: #FF7CA3;
     width: 100%;
 }
 .negrita{
-    color:$color_coral;
+    color:$color_verde
 }
 
 .btnEntregar{
-    background-color: $color_coral;
+    background-color: $color_verde;
     color: $color_blanco;
     border-radius: 5px;
     width: 120px;

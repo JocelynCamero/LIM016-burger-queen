@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import {
-  getFirestore, doc, getDoc, Timestamp, collection, query, where, getDocs,
+  getFirestore, enableIndexedDbPersistence, doc, getDoc,
+  Timestamp, collection, query, where, getDocs,
 } from 'firebase/firestore';
 import {
   getAuth,

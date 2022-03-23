@@ -1,3 +1,11 @@
+// Variables
+$color_azul_oscuro: #1F1D2B;
+$color_azul_claro: #252836;
+$color_verde: #3FAA86;
+$color_placeholder: #ABBBC2;
+$color_blanco: #FFFFFF;
+$color_anular: #FF7CA3;
+
 .ProductoOrden{
     width: 100%;
     display: flex;
@@ -34,4 +42,9 @@
     justify-content: space-around;
     width: 25%;
     align-items: center;
+}
+
+.btnEliminar{
+    border: none;
+    background-color: transparent;
 }

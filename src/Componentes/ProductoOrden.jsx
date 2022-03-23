@@ -14,20 +14,26 @@ export default function ProductoOrden({ product }) {
   return (
     <div className="ProductoOrden">
       <div className="contenedorProductoAgregado">
-        <img className="orden-productoAgregado" src={product.urlProducto} alt="" />
+        <img className="orden-productoAgregado" src={product.url} alt="" />
         <div>
-          <p className="orden-nombreProductoAgregado">{product.nombreProducto}</p>
+          <p className="orden-nombreProductoAgregado">{product.nombre}</p>
           <p className="orden-extras"> </p>
-          <p className="orden-precioProductoAgregado">S/. {product.precioProducto}</p>
+          <p className="orden-precioProductoAgregado">
+            S/.
+            {' '}
+            {product.precio}
+          </p>
         </div>
       </div>
       <div className="contenedorCantidad">
-        <button type="button" className="btnDisminuir"><FontAwesomeIcon className="IconoDsiminuir" icon={faMinus} size="1x" color="#EA7C69" /></button>
-        <p className="orden-cantidadProductoAgregado"> 1 </p>
-        <button type="button" className="btnAumentar"><FontAwesomeIcon className="IconoAumentar" icon={faPlus} size="1x" color="#EA7C69" /></button>
+        <button type="button" className="btnDisminuir"><FontAwesomeIcon className="IconoDsiminuir" icon={faMinus} size="1x" color="#3FAA86" /></button>
+        <p className="orden-cantidadProductoAgregado">{product.cantidadProducto}</p>
+        <button type="button" className="btnAumentar"><FontAwesomeIcon className="IconoAumentar" icon={faPlus} size="1x" color="#3FAA86" /></button>
       </div>
-      <p className="orden-subototatProductoAgregado"> S/30 </p>
-      <button type="button" onClick={() => handleRemove(product)}><FontAwesomeIcon className="IconoAumentar" icon={faTrashCan} size="1x" color="#EA7C69" /></button>
+      <p className="orden-subototatProductoAgregado">
+        {product.subtotal * product.cantidadProducto}
+      </p>
+      <button type="button" className="btnEliminar" onClick={() => handleRemove(product)}><FontAwesomeIcon className="IconoAumentar" icon={faTrashCan} size="1x" color="#3FAA86" /></button>
     </div>
   );
 }

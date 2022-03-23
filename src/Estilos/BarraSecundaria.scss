@@ -1,7 +1,7 @@
 // Variables
 $color_azul_oscuro: #1F1D2B;
 $color_azul_claro: #252836;
-$color_coral: #EA7C69;
+$color_verde: #3FAA86;
 $color_placeholder: #ABBBC2;
 $color_blanco: #FFFFFF;
 $color_anular: #FF7CA3;
@@ -20,24 +20,20 @@ ul{
   width: auto;
   list-style: none;
 }
- 
-li{
- margin: 0 15px;
- text-decoration: none;
+
+.subCategoria{
+  background: transparent;
+  border-color: transparent;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  color: $color_blanco;
+  cursor: pointer;
+  transition: all 0.3s linear;
 }
 
-a{
-    text-decoration: none;
-    color: $color_blanco;
-    font-family: 'Barlow', sans-serif;
-    font-size: 21px;
-}
-button{
-
-    border: none;
-    background-color: transparent;
-    color: white;
-    font-size: 21px;
-    font-family: 'Barlow', sans-serif;
-
+.subCategoria:active, .subCategoria:focus {
+  background: transparent;
+  color: $color_verde;
 }

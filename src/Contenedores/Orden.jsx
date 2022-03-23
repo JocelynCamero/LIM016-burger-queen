@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Swal from 'sweetalert2';
 import AppContext from '../Context/AppContext';
 import CabeceraOrden from '../Componentes/CabeceraOrden';
 import FormularioOrden from '../Componentes/FormularioOrden';
@@ -7,6 +8,20 @@ import ProductoOrden from '../Componentes/ProductoOrden';
 import '../Estilos/Orden.scss';
 
 export default function Orden() {
+  const toastMixin = Swal.mixin({
+    toast: true,
+    icon: 'success',
+    title: 'General Title',
+    animation: false,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer);
+      toast.addEventListener('mouseleave', Swal.resumeTimer);
+    },
+  });
   const { state } = useContext(AppContext);
 
   const sumTotal = () => {
@@ -21,7 +36,7 @@ export default function Orden() {
       <DetalleOrden />
       <div className="ProductosOrdenados">
         {state.cart.map((product) => (
-          <ProductoOrden product={product} key={`orderItem-${product.nombreProducto}`} />
+          <ProductoOrden product={product} key={`orderItem-${product.id}`} />
         ))}
       </div>
       <div className="TotalOrden">
@@ -33,7 +48,17 @@ export default function Orden() {
             {sumTotal()}
           </p>
         </div>
-        <button className="btnTotal" type="button">Enviar a cocinero</button>
+        <button
+          className="btnTotal"
+          type="button"
+          onClick={() => toastMixin.fire({
+            animation: true,
+            title: 'Se envio a cocinero',
+          })}
+        >
+          Enviar a cocinero
+
+        </button>
       </div>
     </div>
   );
