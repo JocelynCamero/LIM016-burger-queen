@@ -3,9 +3,9 @@ import AppContext from '../Context/AppContext';
 import '../Estilos/Producto.scss';
 
 export default function Producto({ producto }) {
-  const { addToCart } = useContext(AppContext);
+  const { agregarProducto } = useContext(AppContext);
   const handleClick = (item) => {
-    addToCart(item);
+    agregarProducto(item);
   };
   return (
     <div className="Producto">
