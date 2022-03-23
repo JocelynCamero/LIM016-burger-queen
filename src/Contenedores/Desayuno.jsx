@@ -29,7 +29,7 @@ export default function Desayuno() {
         <CabeceraUsuario />
         <BarraSecundaria cat="Desayuno" SetCurrentMenu={SetCurrentMenu} />
         <div className="contenedorProductos">
-          { arregloProductos.map((item) => <Producto key={item.id} className="contenedorProducto" urlProducto={item.url} nombreProducto={item.nombre} precioProducto={item.precio} />) }
+          { arregloProductos.map((item) => <Producto key={item.id} className="contenedorProducto" producto={item} />) }
         </div>
       </div>
       <Orden />

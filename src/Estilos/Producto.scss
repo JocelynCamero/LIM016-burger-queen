@@ -1,7 +1,7 @@
 // Variables
 $color_azul_oscuro: #1F1D2B;
 $color_azul_claro: #252836;
-$color_coral: rgb(63, 170, 134);
+$color_verde: #3FAA86;
 $color_placeholder: #ABBBC2;
 $color_blanco: #FFFFFF;
 $color_anular: #FF7CA3;
@@ -11,13 +11,13 @@ $color_anular: #FF7CA3;
     flex-direction: column;
     border-radius: 16px;
     width: 40%;
-    height: 18rem;
+    height: 20rem;
     background-color: $color_azul_oscuro;
-    margin: 2rem 1rem 2rem 1rem;
+    margin: 3rem 1rem 2rem 1rem;
 }
 
 .contenedorImagenProducto{
-    top: -30px;
+    top: -40px;
     position: relative;
 }
 
@@ -30,6 +30,9 @@ $color_anular: #FF7CA3;
 .datosProducto{
     position: relative;
     top: -30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contenedorCantidad{
@@ -53,6 +56,7 @@ $color_anular: #FF7CA3;
     font-size: 19px;
     font-weight: 500;
     font-family: 'Barlow', sans-serif;
+    width: 90%;
 }
 
 .precioProducto{
@@ -61,7 +65,7 @@ $color_anular: #FF7CA3;
 }
 
 .btnAgregar{
-    background-color: $color_coral;
+    background-color: $color_verde;
     color: $color_blanco;
     border-radius: 5px;
     width: auto;

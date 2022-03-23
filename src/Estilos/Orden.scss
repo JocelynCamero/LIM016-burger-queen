@@ -1,3 +1,11 @@
+// Variables
+$color_azul_oscuro: #1F1D2B;
+$color_azul_claro: #252836;
+$color_verde: #3FAA86;
+$color_placeholder: #ABBBC2;
+$color_blanco: #FFFFFF;
+$color_anular: #FF7CA3;
+
 .Orden{
     display: flex;
     flex-direction: column;
@@ -6,18 +14,12 @@
     width: 37vw;
     left: 742px;
     top: 0px;
-    background: #1F1D2B;
+    background: $color_azul_oscuro;
     scroll-behavior: smooth;
     overflow-y: scroll;
     scroll-behavior: smooth;
     height:834px;
 }
-$color_azul_oscuro: #1F1D2B;
-$color_azul_claro: #252836;
-$color_coral: #EA7C69;
-$color_placeholder: #ABBBC2;
-$color_blanco: #FFFFFF;
-$color_anular: #FF7CA3;
 
 .TotalOrden{
     width: 100%;
@@ -40,7 +42,7 @@ $color_anular: #FF7CA3;
 }
 
 .btnTotal{
-    background-color: $color_coral;
+    background-color: $color_verde;
     color: $color_blanco;
     border-radius: 5px;
     width: auto;

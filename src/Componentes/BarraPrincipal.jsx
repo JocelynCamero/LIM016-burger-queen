@@ -15,7 +15,7 @@ export default function BarraPrincipal({ vista }) {
   };
   return (
     <div className="BarraPrincipal">
-      {cambiarCategoria().map((icono) => <Link key={icono[1]} className="ContenedorIcono" to={icono[1]}><FontAwesomeIcon icon={icono[0]} size="2x" color="White" /></Link>)}
+      {cambiarCategoria().map((icono) => <Link key={icono[1]} className="ContenedorIcono" to={icono[1]}><FontAwesomeIcon className="iconoBarraPrincipal" icon={icono[0]} size="2x" color="White" /></Link>)}
     </div>
   );
 }
