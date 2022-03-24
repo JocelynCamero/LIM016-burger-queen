@@ -11,7 +11,7 @@ export default function Orden() {
 
   const sumTotal = () => {
     const reducer = (accumalator, currentValue) => accumalator + currentValue.precioProducto;
-    const sum = state.cart.reduce(reducer, 0);
+    const sum = state.productosAgregados.reduce(reducer, 0);
     return sum;
   };
   return (
@@ -20,8 +20,8 @@ export default function Orden() {
       <FormularioOrden />
       <DetalleOrden />
       <div className="ProductosOrdenados">
-        {state.cart.map((product) => (
-          <ProductoOrden product={product} key={`orderItem-${product.nombreProducto}`} />
+        {state.productosAgregados.map((product) => (
+          <ProductoOrden product={product} key={`orderItem-${product.id}`} />
         ))}
       </div>
       <div className="TotalOrden">
