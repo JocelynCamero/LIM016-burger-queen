@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 
 // Estado inicial de la orden
@@ -9,15 +9,18 @@ const estadoInicial = {
 const useEstadoInicial = () => {
   // Estado de la orden
   const [orden, setOrden] = useState(estadoInicial);
+  const [total, setTotal] = useState(0);
 
   // Funcion de agregar producto a la orden
   const agregarProducto = (payload) => {
     if (orden.productosAgregados.find((item) => item.id === payload.id)) {
-      Swal.fire(
-        'Producto ya agregado',
-        'Define la cantidad en la orden',
-        'info',
-      );
+      Swal.fire({
+        icon: 'info',
+        title: 'Producto ya agregado',
+        text: 'Define la cantidad en la orden',
+        iconColor: '#252836',
+        confirmButtonColor: '#3FAA86',
+      });
       // console.log('Este producto ya existe en la orden');
     } else {
       const nuevoPayload = { ...payload, cantidad: 1, subtotal: payload.precio };
@@ -47,12 +50,20 @@ const useEstadoInicial = () => {
     }
   };
 
+  // Funcion que calcula el total de la orden
+  useEffect(() => {
+    const reductor = (acumulador, valorActual) => acumulador + valorActual.subtotal;
+    const sum = orden.productosAgregados.reduce(reductor, 0);
+    setTotal(sum);
+  }, [orden]);
+
   return {
     orden,
     agregarProducto,
     eliminarProducto,
     aumentarCantidad,
     disminuirCantidad,
+    total,
   };
 };
 
