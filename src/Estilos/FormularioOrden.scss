@@ -1,7 +1,7 @@
 // Variables
 $color_azul_oscuro: #1F1D2B;
 $color_azul_claro: #252836;
-$color_coral: rgb(63, 170, 134);
+$color_verde: #3FAA86;
 $color_placeholder: #ABBBC2;
 $color_blanco: #FFFFFF;
 $color_anular: #FF7CA3;
@@ -23,6 +23,19 @@ $color_anular: #FF7CA3;
     text-align: center;
     background: none;
     border: none;
-    border-bottom: 1px solid $color_coral;
+    border-bottom: 1px solid $color_verde;
     outline: 0px;
+}
+
+.mesa{
+    border: none;
+    width: 388px;
+    margin-top: 30px;
+    height: 30px;
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    background-color: #1F1D2B;
+    color: $color_blanco;
+    border-bottom: 1px solid $color_verde;
 }

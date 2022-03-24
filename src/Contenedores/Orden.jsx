@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Swal from 'sweetalert2';
 import AppContext from '../Context/AppContext';
 import CabeceraOrden from '../Componentes/CabeceraOrden';
 import FormularioOrden from '../Componentes/FormularioOrden';
@@ -7,20 +8,6 @@ import ProductoOrden from '../Componentes/ProductoOrden';
 import '../Estilos/Orden.scss';
 
 export default function Orden() {
-  const toastMixin = Swal.mixin({
-    toast: true,
-    icon: 'success',
-    title: 'General Title',
-    animation: false,
-    position: 'top-end',
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener('mouseenter', Swal.stopTimer);
-      toast.addEventListener('mouseleave', Swal.resumeTimer);
-    },
-  });
   const { orden } = useContext(AppContext);
 
   return (
@@ -38,10 +25,31 @@ export default function Orden() {
         <div className="contenedorMontoTotal">
           <p>Total</p>
           <p className="totalSoles">
-            S/
+            S/.
+            {' '}
+            {orden.totalOrden}
           </p>
         </div>
-        <button className="btnTotal" type="button">Enviar a cocinero</button>
+        <button
+          className="btnTotal"
+          type="button"
+          onClick={() => {
+            Swal.fire({
+              title: 'Se envio la orden al cocinero',
+              animation: true,
+              toast: true,
+              icon: 'success',
+              iconColor: '#3FAA86',
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+            }); console.log(orden);
+          }}
+        >
+          Enviar a cocinero
+
+        </button>
       </div>
     </div>
   );
