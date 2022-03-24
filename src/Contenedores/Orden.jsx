@@ -8,7 +8,7 @@ import ProductoOrden from '../Componentes/ProductoOrden';
 import '../Estilos/Orden.scss';
 
 export default function Orden() {
-  const { orden, total } = useContext(AppContext);
+  const { orden } = useContext(AppContext);
 
   return (
     <div className="Orden">
@@ -27,7 +27,7 @@ export default function Orden() {
           <p className="totalSoles">
             S/.
             {' '}
-            {total}
+            {orden.totalOrden}
           </p>
         </div>
         <button
