@@ -20,7 +20,7 @@ const useEstadoInicial = () => {
       );
       // console.log('Este producto ya existe en la orden');
     } else {
-      const nuevoPayload = { ...payload, cantidad: 1 };
+      const nuevoPayload = { ...payload, cantidad: 1, subtotal: payload.precio };
       setOrden({ productosAgregados: [...orden.productosAgregados, nuevoPayload] });
     }
   };
@@ -30,18 +30,29 @@ const useEstadoInicial = () => {
     setOrden({ productosAgregados: orden.productosAgregados.filter((i) => i.nombre !== payload.nombre) });
   };
 
-  // Funcion aumentar cantidad de un producto en la orden
+  // Funcion para aumentar cantidad de un producto en la orden
   const aumentarCantidad = (id) => {
-    const productosAgregadosEdit = orden.productosAgregados.map((item) => (item.id === id ? { ...item, cantidad: item.cantidad + 1 } : item));
+    const productosAgregadosEdit = orden.productosAgregados.map((item) => (item.id === id ? { ...item, cantidad: item.cantidad + 1, subtotal: item.precio * (item.cantidad + 1) } : item));
     setOrden({ productosAgregados: productosAgregadosEdit });
     // console.log(orden.productosAgregados);
   };
 
+  // Funcion para disminuir cantidad de un producto en la orden
+  const disminuirCantidad = (id) => {
+    if (orden.productosAgregados.find((item) => item.id === id).cantidad === 1) {
+      eliminarProducto(orden.productosAgregados.find((item) => item.id === id));
+    } else {
+      const productosAgregadosEdit = orden.productosAgregados.map((item) => (item.id === id ? { ...item, cantidad: item.cantidad - 1, subtotal: item.precio * (item.cantidad - 1) } : item));
+      setOrden({ productosAgregados: productosAgregadosEdit });
+    }
+  };
+
   return {
-    state: orden,
+    orden,
     agregarProducto,
     eliminarProducto,
     aumentarCantidad,
+    disminuirCantidad,
   };
 };
 
