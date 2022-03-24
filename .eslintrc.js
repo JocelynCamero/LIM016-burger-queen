@@ -20,5 +20,6 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     'linebreak-style': ['error', 'windows'],
+    'max-len': ['error', 150],
   },
 };

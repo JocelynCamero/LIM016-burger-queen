@@ -22,20 +22,15 @@ export default function Orden() {
       toast.addEventListener('mouseleave', Swal.resumeTimer);
     },
   });
-  const { state } = useContext(AppContext);
+  const { orden } = useContext(AppContext);
 
-  const sumTotal = () => {
-    const reducer = (accumalator, currentValue) => accumalator + currentValue.precioProducto;
-    const sum = state.productosAgregados.reduce(reducer, 0);
-    return sum;
-  };
   return (
     <div className="Orden">
       <CabeceraOrden />
       <FormularioOrden />
       <DetalleOrden />
       <div className="ProductosOrdenados">
-        {state.productosAgregados.map((product) => (
+        {orden.productosAgregados.map((product) => (
           <ProductoOrden product={product} key={`orderItem-${product.id}`} />
         ))}
       </div>
@@ -45,7 +40,6 @@ export default function Orden() {
           <p>Total</p>
           <p className="totalSoles">
             S/
-            {sumTotal()}
           </p>
         </div>
         <button

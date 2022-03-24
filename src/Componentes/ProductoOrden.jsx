@@ -5,7 +5,7 @@ import '../Estilos/ProductoOrden.scss';
 import AppContext from '../Context/AppContext';
 
 export default function ProductoOrden({ product }) {
-  const { eliminarProducto, aumentarCantidad } = useContext(AppContext);
+  const { eliminarProducto, aumentarCantidad, disminuirCantidad } = useContext(AppContext);
   const handleRemove = (producto) => {
     console.log('estoy eliminando');
     eliminarProducto(producto);
@@ -26,16 +26,37 @@ export default function ProductoOrden({ product }) {
         </div>
       </div>
       <div className="contenedorCantidad">
-        <button type="button" className="btnDisminuir" aria-label="botonDisminuir"><FontAwesomeIcon className="IconoDsiminuir" icon={faMinus} size="1x" color="#3FAA86" /></button>
+        <button
+          type="button"
+          className="btnDisminuir"
+          aria-label="botonDisminuir"
+          onClick={() => disminuirCantidad(product.id)}
+        >
+          <FontAwesomeIcon className="IconoDsiminuir" icon={faMinus} size="1x" color="#3FAA86" />
+        </button>
         <p className="orden-cantidadProductoAgregado">{product.cantidad}</p>
-        <button type="button" className="btnAumentar" aria-label="botonAumentar" onClick={() => aumentarCantidad(product.id)}><FontAwesomeIcon className="IconoAumentar" icon={faPlus} size="1x" color="#3FAA86" /></button>
+        <button
+          type="button"
+          className="btnAumentar"
+          aria-label="botonAumentar"
+          onClick={() => aumentarCantidad(product.id)}
+        >
+          <FontAwesomeIcon className="IconoAumentar" icon={faPlus} size="1x" color="#3FAA86" />
+        </button>
       </div>
       <p className="orden-subototatProductoAgregado">
         S/.
         {' '}
-        {product.precio * product.cantidad}
+        {product.subtotal}
       </p>
-      <button type="button" className="btnEliminar" aria-label="botonEliminar" onClick={() => handleRemove(product)}><FontAwesomeIcon className="IconoAumentar" icon={faTrashCan} size="1x" color="#3FAA86" /></button>
+      <button
+        type="button"
+        className="btnEliminar"
+        aria-label="botonEliminar"
+        onClick={() => handleRemove(product)}
+      >
+        <FontAwesomeIcon className="IconoAumentar" icon={faTrashCan} size="1x" color="#3FAA86" />
+      </button>
     </div>
   );
 }
