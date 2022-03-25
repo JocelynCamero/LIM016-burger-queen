@@ -7,10 +7,12 @@ import { obtenerProductos } from '../Firebase/firebaseStore';
 import '../Estilos/Desayuno.scss';
 
 export default function Desayuno() {
-  const [curretMenu, SetCurrentMenu] = useState('Cafe');
+  // Estado de la subcategoria
+  const [subcategoria, setSubcategoria] = useState('Cafe');
+
   // Funcion obtener productos de Firestore
   const bdProductos = async () => {
-    const querySnapshot = await obtenerProductos('Desayuno', curretMenu);
+    const querySnapshot = await obtenerProductos('Desayuno', subcategoria);
     const arrProductos = [];
     querySnapshot.forEach((docu) => {
       arrProductos.push(docu.data());
@@ -18,16 +20,19 @@ export default function Desayuno() {
     return arrProductos;
   };
 
+  // Estado del arreglo de productos
   const [arregloProductos, setArregloProductos] = useState([]);
+
+  // Efecto para que se actualice los productos cuando cambie la subcategoria
   useEffect(() => bdProductos().then((arr) => {
     console.log(arr);
     setArregloProductos(arr);
-  }), [curretMenu]);
+  }), [subcategoria]);
   return (
     <div className="Desayuno">
       <div className="menu">
         <CabeceraUsuario />
-        <BarraSecundaria cat="Desayuno" SetCurrentMenu={SetCurrentMenu} />
+        <BarraSecundaria cat="Desayuno" setSubcategoria={setSubcategoria} />
         <div className="contenedorProductos">
           { arregloProductos.map((item) => <Producto key={item.id} className="contenedorProducto" producto={item} />) }
         </div>

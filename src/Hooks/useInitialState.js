@@ -60,8 +60,8 @@ const useEstadoInicial = () => {
   const controladorDeEnvio = (e, form) => {
     e.preventDefault();
     const formData = new FormData(form.current);
-    setOrden({ ...orden, nombreCliente: formData.get('nombreCliente'),numeroMesa: formData.get('mesa') });
-    console.log(orden.nombreCliente);
+    setOrden({ ...orden, nombreCliente: formData.get('nombreCliente'), numeroMesa: formData.get('mesa') });
+    // console.log(orden.nombreCliente);
   };
 
   return {
