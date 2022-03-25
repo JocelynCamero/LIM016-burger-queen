@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
-
 // Estado inicial de la orden
 const estadoInicial = {
   productosAgregados: [],
   totalOrden: 0,
+  nombreCliente: '',
+  numeroMesa: '',
 };
 
 const useEstadoInicial = () => {
@@ -56,6 +57,12 @@ const useEstadoInicial = () => {
     const suma = orden.productosAgregados.reduce(reductor, 0);
     setOrden({ ...orden, totalOrden: suma });
   }, [orden.productosAgregados]);
+  const controladorDeEnvio = (e, form) => {
+    e.preventDefault();
+    const formData = new FormData(form.current);
+    setOrden({ ...orden, nombreCliente: formData.get('nombreCliente'),numeroMesa: formData.get('mesa') });
+    console.log(orden.nombreCliente);
+  };
 
   return {
     orden,
@@ -63,6 +70,8 @@ const useEstadoInicial = () => {
     eliminarProducto,
     aumentarCantidad,
     disminuirCantidad,
+    controladorDeEnvio,
+
   };
 };
 

@@ -33,17 +33,19 @@ export default function Orden() {
         <button
           className="btnTotal"
           type="button"
-          onClick={() => Swal.fire({
-            title: 'Se envio la orden al cocinero',
-            animation: true,
-            toast: true,
-            icon: 'success',
-            iconColor: '#3FAA86',
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-          })}
+          onClick={() => {
+            Swal.fire({
+              title: 'Se envio la orden al cocinero',
+              animation: true,
+              toast: true,
+              icon: 'success',
+              iconColor: '#3FAA86',
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+            }); console.log(orden);
+          }}
         >
           Enviar a cocinero
 
