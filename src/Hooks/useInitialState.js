@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
+
 // Estado inicial de la orden
 const estadoInicial = {
+  numeroOrden: '',
+  nombreCli: '',
+  numeroMesa: '',
+  nombreMesero: '',
   productosAgregados: [],
   totalOrden: 0,
-  nombreCliente: '',
-  numeroMesa: '',
 };
 
 const useEstadoInicial = () => {
@@ -57,22 +60,85 @@ const useEstadoInicial = () => {
     const suma = orden.productosAgregados.reduce(reductor, 0);
     setOrden({ ...orden, totalOrden: suma });
   }, [orden.productosAgregados]);
-  const controladorDeEnvio = (e, form) => {
-    e.preventDefault();
-    const formData = new FormData(form.current);
-    setOrden({ ...orden, nombreCliente: formData.get('nombreCliente'), numeroMesa: formData.get('mesa') });
-    // console.log(orden.nombreCliente);
+
+  // Funcion que obtiene el nombre del cliente
+  const obtenerNombreCliente = (nombCliente) => {
+    console.log(nombCliente);
+    console.log('entra a la funcion');
+    setOrden({ ...orden, nombreCli: nombCliente });
   };
+
+  // Funcion que obtiene el numero de la mesa
+  const obtenerNumeroMesa = (nunMesa) => {
+    setOrden({ ...orden, numeroMesa: nunMesa });
+  };
+
+  // Funcion que obtiene el numero de orden
+  const numeroOrden = (numOrden) => {
+    setOrden({ ...orden, numeroOrden: numOrden });
+  };
+
+  // Funcion que obtiene el nombre del mesero
+  const obtenerNombreMesero = (nomMesero) => {
+    setOrden({ ...orden, nombreMesero: nomMesero });
+  };
+
+  // Funcion que limpia los campos de la orden
+  // const limpiarOrden = () => {
+  //   setOrden(estadoInicial);
+  // };
 
   return {
     orden,
+    setOrden,
     agregarProducto,
     eliminarProducto,
     aumentarCantidad,
     disminuirCantidad,
-    controladorDeEnvio,
-
+    obtenerNombreCliente,
+    obtenerNumeroMesa,
+    numeroOrden,
+    obtenerNombreMesero,
   };
 };
 
 export default useEstadoInicial;
+
+// Funcion que guarda el nombre del cliente y el numero de mesa
+// const controladorDeEnvio = (e) => {
+//   e.preventDefault();
+
+//   if (formData.get('nombreCliente') === '' || formData.get('mesa') === 'Seleccione la mesa') {
+//     Swal.fire({
+//       icon: 'error',
+//       title: 'Datos incompletos',
+//       text: 'Por favor complete los campos solicitados',
+//       iconColor: '#FF7CA3',
+//       confirmButtonColor: '#3FAA86',
+//     });
+//   } else {
+//     setOrden({ ...orden, nombreCliente: formData.get('nombreCliente'), numeroMesa: formData.get('mesa') });
+//     Swal.fire({
+//       title: 'Se envio la orden al cocinero',
+//       animation: true,
+//       toast: true,
+//       icon: 'success',
+//       iconColor: '#3FAA86',
+//       position: 'top-end',
+//       showConfirmButton: false,
+//       timer: 3000,
+//       timerProgressBar: true,
+//     });
+//   // console.log(orden.nombreCliente);
+//   }
+// };
+
+// Funcion que genera el numero de orden
+// const numeracionOrden = async () => {
+//   const arrOrdenes = await obtenerOrdenes();
+//   console.log(arrOrdenes);
+//   const numeroOrden = arrOrdenes.length + 1;
+//   const numOrden = `ORD-00000${numeroOrden}`;
+//   console.log(numOrden);
+//   return numOrden;
+// };

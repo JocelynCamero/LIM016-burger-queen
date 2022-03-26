@@ -55,7 +55,7 @@ export default function ProductoOrden({ product }) {
         aria-label="botonEliminar"
         onClick={() => handleRemove(product)}
       >
-        <FontAwesomeIcon className="IconoAumentar" icon={faTrashCan} size="1x" color="#3FAA86" />
+        <FontAwesomeIcon className="IconoAumentar" icon={faTrashCan} size="1x" color="#FF7CA3" />
       </button>
     </div>
   );

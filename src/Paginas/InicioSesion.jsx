@@ -1,13 +1,16 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import AppContext from '../Context/AppContext';
 import { iniciarSesion } from '../Firebase/firebaseAuth';
 import { obtenerUsuario } from '../Firebase/firebaseStore';
 import logo from '../Imagenes/logoHamburguesa.svg';
 import '../Estilos/InicioSesion.scss';
 
 export default function InicioSesion() {
+  const { obtenerNombreMesero } = useContext(AppContext);
+
   const navigate = useNavigate();
   const correoRef = useRef();
   const contraRef = useRef();
@@ -20,6 +23,7 @@ export default function InicioSesion() {
       .then((credencialUsuario) => {
         console.log('inicio sesion');
         obtenerUsuario(credencialUsuario.user.uid).then((docu) => {
+          obtenerNombreMesero(docu.nombre);
           console.log(docu.rol);
           if (docu.rol === 'Mesero') navigate('/VistaMesero/Desayuno');
           else navigate('/VistaCocina');
@@ -38,7 +42,7 @@ export default function InicioSesion() {
           <FontAwesomeIcon className="IconoUsuario" icon={faUserCircle} size="8x" color="#252836" />
           <div className="Grupo">
             <p className="Texto">Correo</p>
-            <input className="Input" ref={correoRef} placeholder="exaple@example.com" type="email" />
+            <input className="Input" ref={correoRef} placeholder="example@example.com" type="email" />
           </div>
           <div className="Grupo">
             <p className="Texto">Contraseña</p>
