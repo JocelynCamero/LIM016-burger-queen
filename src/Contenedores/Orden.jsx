@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Swal from 'sweetalert2';
 import AppContext from '../Context/AppContext';
 import CabeceraOrden from '../Componentes/CabeceraOrden';
 import FormularioOrden from '../Componentes/FormularioOrden';
@@ -33,23 +32,12 @@ export default function Orden() {
         <button
           className="btnTotal"
           type="button"
-          onClick={() => {
-            Swal.fire({
-              title: 'Se envio la orden al cocinero',
-              animation: true,
-              toast: true,
-              icon: 'success',
-              iconColor: '#3FAA86',
-              position: 'top-end',
-              showConfirmButton: false,
-              timer: 3000,
-              timerProgressBar: true,
-            }); console.log(orden);
-          }}
+          onClick={() => console.log(orden)}
         >
           Enviar a cocinero
 
         </button>
+        <button type="button" onClick={() => console.log(orden)}>verificar orden</button>
       </div>
     </div>
   );

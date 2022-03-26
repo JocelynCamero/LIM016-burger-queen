@@ -3,7 +3,7 @@ import AppContext from '../Context/AppContext';
 import '../Estilos/FormularioOrden.scss';
 
 export default function FormularioOrden() {
-  const { controladorDeEnvio, orden } = useContext(AppContext);
+  const { controladorDeEnvio } = useContext(AppContext);
   const form = useRef(null);
 
   return (
@@ -15,7 +15,7 @@ export default function FormularioOrden() {
         <option value="Mesa 3">Mesa 3</option>
         <option value="Mesa 4">Mesa 4</option>
       </select>
-      <button type="button" onClick={(e) => { controladorDeEnvio(e, form)}}> mostrar </button>
+      <button type="button" onClick={(e) => { controladorDeEnvio(e, form); }}> mostrar </button>
       {/* <input className="orden-numeroMesa" type="text" placeholder="N° de mesa" /> */}
     </form>
   );

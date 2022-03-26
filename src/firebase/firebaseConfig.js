@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import {
-  getFirestore, doc, getDoc,
+  getFirestore, doc, getDoc, addDoc,
   Timestamp, collection, query, where, getDocs,
 } from 'firebase/firestore';
 import {
@@ -37,4 +37,5 @@ export {
   query,
   where,
   getDocs,
+  addDoc,
 };
