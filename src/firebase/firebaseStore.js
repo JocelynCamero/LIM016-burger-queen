@@ -1,3 +1,4 @@
+import { addDoc } from 'firebase/firestore';
 import {
   db,
   doc,
@@ -19,9 +20,5 @@ export const obtenerProductos = async (categoria, subcategoria) => {
   }); */
   return querySnapshot;
 };
-// collection(db, 'productos');
 
-export const obtenerFecha = () => {
-  const fecha = Timestamp.fromDate(new Date()).toDate().toDateString();
-  return fecha;
-};
+export const guardarData = (orden) => addDoc(collection(db, 'ordenes'), { orden });
