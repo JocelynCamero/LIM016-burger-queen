@@ -1,14 +1,13 @@
 import React from 'react';
 import '../Estilos/ProductoOrdenPendiente.scss';
 
-export default function ProductoOrdenPendiente() {
+export default function ProductoOrdenPendiente({ producto }) {
   return (
     <div className="ProductoOrdenPendiente">
       <div className="productoDetalle">
-        <p className="texto">Hamburguesa de carne simple</p>
-        <p className="texto">Queso - Huevo</p>
+        <p className="texto">{producto.nombre}</p>
       </div>
-      <p>2</p>
+      <p>{producto.cantidad}</p>
     </div>
   );
 }

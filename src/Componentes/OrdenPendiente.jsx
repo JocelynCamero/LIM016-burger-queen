@@ -2,29 +2,27 @@ import React from 'react';
 import ProductoOrdenPendiente from './ProductoOrdenPendiente';
 import '../Estilos/OrdenPendiente.scss';
 
-export default function OrdenPendiente() {
+export default function OrdenPendiente({ orden, subcategoria }) {
   return (
     <div className="OrdenPendiente">
       <div className="ordenMesero">
         <p className="numeroOrden">
           <span className="negrita">Orden N°: </span>
-          000001
+          {orden.numeroOrden}
         </p>
         <p className="nombreMesero">
           <span className="negrita">Mesero: </span>
-          Pepito
+          {orden.nombreMesero}
         </p>
       </div>
       <p className="numeroMesa">
         <span className="negrita">Mesa: </span>
-        2
+        {orden.numeroMesa}
       </p>
       <div className="contenedorProductosPendientes">
-        <ProductoOrdenPendiente />
-        <ProductoOrdenPendiente />
-        <ProductoOrdenPendiente />
+        {orden.productosAgregados.map((producto) => <ProductoOrdenPendiente key={producto.id} producto={producto} />)}
       </div>
-      <button type="button" className="btnEntregar">Entregar</button>
+      {subcategoria === 'Por entregar' ? <button type="button" className="btnEntregar">Entregar</button> : ' '}
     </div>
   );
 }
