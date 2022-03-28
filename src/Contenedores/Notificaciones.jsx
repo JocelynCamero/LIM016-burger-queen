@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { obtenerOrdenesFiltradas } from '../Firebase/firebaseStore';
-import CabeceraMesero from '../Componentes/CabeceraUsuario';
+import CabeceraUsuario from '../Componentes/CabeceraUsuario';
 import BarraSecundaria from '../Componentes/BarraSecundaria';
 import OrdenPendiente from '../Componentes/OrdenPendiente';
 import '../Estilos/Notificaciones.scss';
@@ -30,7 +30,7 @@ export default function Notificaciones() {
 
   return (
     <div className="Notificaciones">
-      <CabeceraMesero />
+      <CabeceraUsuario />
       <BarraSecundaria cat="Notificaciones" setSubcategoria={setSubcategoria} />
       <div className="contenedorOrdenes">
         {arregloOrdenes.map((orden) => <OrdenPendiente key={orden.numeroOrden} orden={orden} subcategoria={subcategoria} />)}

@@ -7,7 +7,7 @@ import VistaCocina from '../Paginas/VistaCocina';
 import Desayuno from '../Contenedores/Desayuno';
 import Almuerzo from '../Contenedores/Almuerzo';
 import Notificaciones from '../Contenedores/Notificaciones';
-import Cocina from '../Contenedores/Cocina';
+import Pedidos from '../Contenedores/Pedidos';
 import AppContext from '../Context/AppContext';
 import useInitialState from '../Hooks/useInitialState';
 
@@ -24,7 +24,7 @@ function App() {
             <Route path="/VistaMesero/Notificaciones" element={<Notificaciones />} />
           </Route>
           <Route path="/VistaCocina" element={<VistaCocina />}>
-            <Route path="/VistaCocina/Pedidos" element={<Cocina />} />
+            <Route path="/VistaCocina/Pedidos" element={<Pedidos />} />
           </Route>
         </Routes>
       </div>
