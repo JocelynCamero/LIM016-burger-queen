@@ -1,5 +1,4 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
 import '../estilos/App.scss';
 import InicioSesion from '../paginas/InicioSesion';
 import VistaMesero from '../paginas/VistaMesero';
@@ -10,6 +9,7 @@ import Notificaciones from '../contenedores/Notificaciones';
 import Pedidos from '../contenedores/Pedidos';
 import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
+
 
 function App() {
   const initialState = useInitialState();
