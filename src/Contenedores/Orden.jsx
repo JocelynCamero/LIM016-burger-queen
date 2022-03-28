@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import AppContext from '../Context/AppContext';
-import { guardarData } from '../Firebase/firebaseStore';
-import CabeceraOrden from '../Componentes/CabeceraOrden';
-import FormularioOrden from '../Componentes/FormularioOrden';
-import DetalleOrden from '../Componentes/DetalleOrden';
-import ProductoOrden from '../Componentes/ProductoOrden';
-import '../Estilos/Orden.scss';
+import AppContext from '../context/AppContext';
+import { guardarData } from '../firebase/firebaseStore';
+import CabeceraOrden from '../componentes/CabeceraOrden';
+import FormularioOrden from '../componentes/FormularioOrden';
+import DetalleOrden from '../componentes/DetalleOrden';
+import ProductoOrden from '../componentes/ProductoOrden';
+import '../estilos/Orden.scss';
 
 export default function Orden() {
   const navigate = useNavigate();

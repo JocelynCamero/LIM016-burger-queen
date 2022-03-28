@@ -6,7 +6,7 @@ $color_placeholder: #ABBBC2;
 $color_blanco: #FFFFFF;
 $color_anular: #FF7CA3;
 
-.OrdenPendiente{
+.OrdenPendiente, .PedidoPendiente{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@ $color_anular: #FF7CA3;
     padding: 1rem;
 }
 
-.ordenMesero{
+.ordenMesero, .PedidoCocina{
     display: flex;
     flex-direction: row;
     justify-content: space-around;

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCoffee, faBurger, faBell, faArrowRightFromBracket, faClipboardList,
 } from '@fortawesome/free-solid-svg-icons';
-import '../Estilos/BarraPrincipal.scss';
+import '../estilos/BarraPrincipal.scss';
 
 export default function BarraPrincipal({ vista }) {
   const cambiarCategoria = () => {

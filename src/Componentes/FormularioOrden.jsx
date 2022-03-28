@@ -1,6 +1,6 @@
 import React, { useRef, useContext } from 'react';
-import AppContext from '../Context/AppContext';
-import '../Estilos/FormularioOrden.scss';
+import AppContext from '../context/AppContext';
+import '../estilos/FormularioOrden.scss';
 
 export default function FormularioOrden() {
   const { obtenerNombreCliente, obtenerNumeroMesa } = useContext(AppContext);
@@ -30,8 +30,6 @@ export default function FormularioOrden() {
         <option value="Mesa 3">Mesa 3</option>
         <option value="Mesa 4">Mesa 4</option>
       </select>
-      <button type="button" onClick={(e) => { controladorDeEnvio(e, form); }}> mostrar </button>
-      {/* <input className="orden-numeroMesa" type="text" placeholder="N° de mesa" /> */}
     </form>
   );
 }
