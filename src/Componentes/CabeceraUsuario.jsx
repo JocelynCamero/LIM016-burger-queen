@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import AppContext from '../Context/AppContext';
+import AppContext from '../context/AppContext';
 import Hora from './Hora';
-import '../Estilos/CabeceraUsuario.scss';
+import '../estilos/CabeceraUsuario.scss';
 
 export default function CabeceraUsuario() {
   const { orden } = useContext(AppContext);

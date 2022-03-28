@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
-import '../Estilos/ProductoOrden.scss';
-import AppContext from '../Context/AppContext';
+import '../estilos/ProductoOrden.scss';
+import AppContext from '../context/AppContext';
 
 export default function ProductoOrden({ product }) {
   const { eliminarProducto, aumentarCantidad, disminuirCantidad } = useContext(AppContext);

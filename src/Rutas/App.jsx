@@ -1,15 +1,15 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import '../Estilos/App.scss';
-import InicioSesion from '../Paginas/InicioSesion';
-import VistaMesero from '../Paginas/VistaMesero';
-import VistaCocina from '../Paginas/VistaCocina';
-import Desayuno from '../Contenedores/Desayuno';
-import Almuerzo from '../Contenedores/Almuerzo';
-import Notificaciones from '../Contenedores/Notificaciones';
-import Pedidos from '../Contenedores/Pedidos';
-import AppContext from '../Context/AppContext';
-import useInitialState from '../Hooks/useInitialState';
+import '../estilos/App.scss';
+import InicioSesion from '../paginas/InicioSesion';
+import VistaMesero from '../paginas/VistaMesero';
+import VistaCocina from '../paginas/VistaCocina';
+import Desayuno from '../contenedores/Desayuno';
+import Almuerzo from '../contenedores/Almuerzo';
+import Notificaciones from '../contenedores/Notificaciones';
+import Pedidos from '../contenedores/Pedidos';
+import AppContext from '../context/AppContext';
+import useInitialState from '../hooks/useInitialState';
+
 
 function App() {
   const initialState = useInitialState();

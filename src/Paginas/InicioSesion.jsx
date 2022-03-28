@@ -2,11 +2,11 @@ import React, { useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import AppContext from '../Context/AppContext';
-import { iniciarSesion } from '../Firebase/firebaseAuth';
-import { obtenerUsuario } from '../Firebase/firebaseStore';
-import logo from '../Imagenes/logoHamburguesa.svg';
-import '../Estilos/InicioSesion.scss';
+import AppContext from '../context/AppContext';
+import { iniciarSesion } from '../firebase/firebaseAuth';
+import { obtenerUsuario } from '../firebase/firebaseStore';
+import logo from '../imagenes/logoHamburguesa.svg';
+import '../estilos/InicioSesion.scss';
 
 export default function InicioSesion() {
   const { obtenerNombreMesero } = useContext(AppContext);

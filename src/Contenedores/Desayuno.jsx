@@ -3,8 +3,8 @@ import BarraSecundaria from '../Componentes/BarraSecundaria';
 import Producto from '../Componentes/Producto';
 import Orden from './Orden';
 import CabeceraUsuario from '../Componentes/CabeceraUsuario';
-import { obtenerProductos } from '../Firebase/firebaseStore';
-import '../Estilos/Desayuno.scss';
+import { obtenerProductos } from '../firebase/firebaseStore';
+import '../estilos/Desayuno.scss';
 
 export default function Desayuno() {
   // Estado de la subcategoria

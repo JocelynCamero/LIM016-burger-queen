@@ -1,6 +1,6 @@
 import React, { useRef, useContext } from 'react';
-import AppContext from '../Context/AppContext';
-import '../Estilos/FormularioOrden.scss';
+import AppContext from '../context/AppContext';
+import '../estilos/FormularioOrden.scss';
 
 export default function FormularioOrden() {
   const { obtenerNombreCliente, obtenerNumeroMesa } = useContext(AppContext);

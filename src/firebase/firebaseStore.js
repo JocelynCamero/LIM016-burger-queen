@@ -1,7 +1,7 @@
+import { addDoc } from 'firebase/firestore';
 import {
   db,
   doc,
-  addDoc,
   getDoc,
   collection,
   query,
