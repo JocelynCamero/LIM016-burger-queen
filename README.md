@@ -1,4 +1,91 @@
-# Burger Queen
+![](https://komarev.com/ghpvc/?username=JocelynCamero&color=yellow&label=VISTAS)
+# 🍔 Hot Burguer 🍔
+![](https://github.com/JocelynCamero/LIM016-burger-queen/blob/ramaAlterna/src/Imagenes/logoHamburguesa.svg)
+
+## 📌 Descripcion del proyecto
+
+Hot Burguer es una aplicacion creada para los meseros y jefes de cocina de una hamburgueseria, la cual hara que la coordinacion entre los dos puestos de trabajo se lleve de una mejor manera.
+
+ ### Roles
+ Mesero : Personal que registra las ordenes de los clientes.
+ Jefe de cocina : Personal que prepara las ordenes de lo clientes.
+
+
+### Vistas
+Inicio de sesion
+Mesero - Desayuno
+Mesero - Almuerzo
+esero - Notificaciones
+
+Cocina - Registro de ordenes
+
+
+* Vista Desktop 💻
+
+* Vista Tablet 
+
+
+
+### Historias de Usuario y Criterios de Aceptación 
+
+```
+HU 1:  Mesero/a debe poder tomar pedido de cliente
+🗣️ Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala memoria, para saber cuánto cobrar, y enviarlo a la cocina para evitar errores y que se puedan ir preparando en orden.
+
+ 📍 Criterios de Aceptación:
+   ✔️ Anotar nombre de cliente.
+   ✔️ Agregar productos al pedido.
+   ✔️ Eliminar productos.
+   ✔️ Ver resumen y el total de la compra.
+   ✔️ Enviar pedido a cocina (guardar en alguna base de datos).
+   ✔️ Se ve y funciona bien en una tablet
+
+ 📍 Definición de Terminado:
+   ✔️ Debes haber recibido code review de al menos una compañera.
+   ✔️ Haces test unitarios y, además, has testeado tu producto manualmente.
+   ✔️ Hiciste tests de usabilidad e incorporaste el feedback del usuario.
+   ✔️ Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+```
+
+```
+HU 2:  Jefe de cocina debe ver los pedidos
+🗣️ Yo como jefx de cocina quiero ver los pedidos de los clientes en orden y marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs que un pedido está listo para servirlo a un cliente.
+
+ 📍 Criterios de Aceptación:
+   ✔️ Ver los pedidos ordenados según se van haciendo.
+   ✔️ Marcar los pedidos que se han preparado y están listos para servirse.
+   ✔️ Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se marcó como completado.
+
+ 📍 Definición de Terminado:
+   ✔️ Debes haber recibido code review de al menos una compañera.
+   ✔️ Haces test unitarios y, además, has testeado tu producto manualmente.
+   ✔️ Hiciste tests de usabilidad e incorporaste el feedback del usuario.
+   ✔️ Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+```
+
+```
+HU 3:  Meserx debe ver pedidos listos para servir
+🗣️ Yo como meserx quiero ver los pedidos que están preparados para entregarlos rápidamente a los clientes que las hicieron.
+
+ 📍 Criterios de Aceptación:
+   ✔️ Ver listado de pedido listos para servir.
+   ✔️ Marcar pedidos que han sido entregados.
+
+ 📍 Definición de Terminado:
+   ✔️ Debes haber recibido code review de al menos una compañera.
+   ✔️ Haces test unitarios y, además, has testeado tu producto manualmente.
+   ✔️ Hiciste tests de usabilidad e incorporaste el feedback del usuario.
+   ✔️ Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+   ✔️ Los datos se deben mantener íntegros, incluso después de que un pedido ha terminado. Todo esto para poder tener estadísticas en el futuro.
+```
+
+
+### Estudio de Usuario 
+🔎 ¿Quienes son los principales usuarios?
+ Los usuarios de nuestra app serian el personal que ocupa el puesto de mesero y jefe de cocina
+🔎 ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+🔎 ¿Cuáles son las secciones más relevantes que quieren ver en la interfaz? y ¿por qué?
+🔎 ¿Cuándo utilizan o utilizarían el producto?
 
 ## Índice
 

@@ -8,6 +8,7 @@ export default function BarraSecundaria({ cat, setSubcategoria }) {
     if (categoria === 'Desayuno') subcategorias = ['Cafe', 'Sandwich', 'Jugos'];
     if (categoria === 'Almuerzo') subcategorias = ['Hamburguesa', 'Bebidas', 'Acompañamientos'];
     if (categoria === 'Notificaciones') subcategorias = ['Por entregar', 'Entregado'];
+    if (categoria === 'Pedidos') subcategorias = ['Recibidos', 'Preparados'];
     return subcategorias;
   };
 
