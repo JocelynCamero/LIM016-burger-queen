@@ -24,7 +24,7 @@ function App() {
             <Route path="/VistaMesero/Notificaciones" element={<Notificaciones />} />
           </Route>
           <Route path="/VistaCocina" element={<VistaCocina />}>
-            <Route path="/VistaCocina/Cocina" element={<Cocina />} />
+            <Route path="/VistaCocina/Pedidos" element={<Cocina />} />
           </Route>
         </Routes>
       </div>

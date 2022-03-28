@@ -16,7 +16,7 @@ export default function BarraPrincipal({ vista }) {
         [faBell, '/VistaMesero/Notificaciones'],
         [faArrowRightFromBracket, '/']];
     }
-    if (vista === 'VistaCocina') categoria = [[faClipboardList, 'Pendientes'], [faArrowRightFromBracket, '/']];
+    if (vista === 'VistaCocina') categoria = [[faClipboardList, '/VistaCocina/Pedidos'], [faArrowRightFromBracket, '/']];
     return categoria;
   };
   return (
