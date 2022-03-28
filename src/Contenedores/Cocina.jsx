@@ -2,7 +2,7 @@ import React from 'react';
 import BarraSecundaria from '../Componentes/BarraSecundaria';
 import CabeceraUsuario from '../Componentes/CabeceraUsuario';
 import '../Estilos/VistaMesero.scss';
-import OrdenPendiente from '../Componentes/OrdenPendiente';
+// import OrdenPendiente from '../Componentes/OrdenPendiente';
 
 export default function Cocina() {
   return (
@@ -12,16 +12,7 @@ export default function Cocina() {
         <CabeceraUsuario />
         <BarraSecundaria cat="Cocina" />
       </div>
-      <div className="contenedorOrdenes">
-        <OrdenPendiente />
-        <OrdenPendiente />
-        <OrdenPendiente />
-        <OrdenPendiente />
-        <OrdenPendiente />
-        <OrdenPendiente />
-        <OrdenPendiente />
-        <OrdenPendiente />
-      </div>
+      <div className="contenedorOrdenes" />
     </div>
   );
 }

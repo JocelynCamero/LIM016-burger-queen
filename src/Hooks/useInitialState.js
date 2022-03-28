@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+// import { guardarData } from '../Firebase/firebaseStore';
 import Swal from 'sweetalert2';
 
 // Estado inicial de la orden
@@ -74,7 +75,7 @@ const useEstadoInicial = () => {
   };
 
   // Funcion que obtiene el numero de orden
-  const numeroOrden = (numOrden) => {
+  const obtenerNumeroOrden = (numOrden) => {
     setOrden({ ...orden, numeroOrden: numOrden });
   };
 
@@ -97,8 +98,9 @@ const useEstadoInicial = () => {
     disminuirCantidad,
     obtenerNombreCliente,
     obtenerNumeroMesa,
-    numeroOrden,
+    obtenerNumeroOrden,
     obtenerNombreMesero,
+    // limpiarOrden,
   };
 };
 

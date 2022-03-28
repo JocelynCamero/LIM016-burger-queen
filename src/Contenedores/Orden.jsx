@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AppContext from '../Context/AppContext';
+import { guardarData } from '../Firebase/firebaseStore';
 import CabeceraOrden from '../Componentes/CabeceraOrden';
 import FormularioOrden from '../Componentes/FormularioOrden';
 import DetalleOrden from '../Componentes/DetalleOrden';
@@ -7,6 +9,7 @@ import ProductoOrden from '../Componentes/ProductoOrden';
 import '../Estilos/Orden.scss';
 
 export default function Orden() {
+  const navigate = useNavigate();
   const { orden } = useContext(AppContext);
 
   return (
@@ -32,7 +35,11 @@ export default function Orden() {
         <button
           className="btnTotal"
           type="button"
-          onClick={() => console.log(orden)}
+          onClick={() => {
+            console.log(orden);
+            guardarData(orden);
+            navigate('/VistaMesero/Desayuno');
+          }}
         >
           Enviar a cocinero
 

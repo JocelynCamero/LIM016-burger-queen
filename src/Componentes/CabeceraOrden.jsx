@@ -4,7 +4,7 @@ import { obtenerOrdenes } from '../Firebase/firebaseStore';
 import '../Estilos/CabeceraOrden.scss';
 
 export default function CabeceraOrden() {
-  const { orden, numeroOrden } = useContext(AppContext);
+  const { orden, obtenerNumeroOrden } = useContext(AppContext);
 
   const numeracionOrden = async () => {
     const arrOrdenes = await obtenerOrdenes();
@@ -15,7 +15,7 @@ export default function CabeceraOrden() {
     return numOrden;
   };
 
-  useEffect(() => numeracionOrden().then((numOrden) => numeroOrden(numOrden)), []);
+  useEffect(() => numeracionOrden().then((numOrden) => obtenerNumeroOrden(numOrden)), []);
 
   return (
     <div className="CabeceraOrden">
