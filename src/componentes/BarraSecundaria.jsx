@@ -1,5 +1,5 @@
 import React from 'react';
-import '../estilo/BarraSecundaria.scss';
+import '../estilos/BarraSecundaria.scss';
 
 export default function BarraSecundaria({ cat, setSubcategoria }) {
   // Funcion para obtener las subcategorias

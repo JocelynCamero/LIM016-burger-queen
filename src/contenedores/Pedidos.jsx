@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { obtenerOrdenesFiltradas } from '../firebase/firebaseStore';
-import CabeceraUsuario from '../componente/CabeceraUsuario';
-import BarraSecundaria from '../componente/BarraSecundaria';
-import OrdenPendiente from '../componente/OrdenPendiente';
-import '../estilo/Notificaciones.scss';
+import BarraPrincipal from '../componentes/BarraPrincipal';
+import CabeceraUsuario from '../componentes/CabeceraUsuario';
+import BarraSecundaria from '../componentes/BarraSecundaria';
+import PedidoPendiente from '../componentes/PedidoPendiente';
+import '../estilos/Notificaciones.scss';
 
-export default function Notificaciones() {
-  // Estado de la subcategoria
-  const [subcategoria, setSubcategoria] = useState('Por entregar');
+export default function Pedidos() {
+  const [subcategoria, setSubcategoria] = useState('Por preparar');
 
   // Funcion obtener productos de Firestore
   const bdOrdenes = async () => {
@@ -21,21 +21,19 @@ export default function Notificaciones() {
 
   // Estado del arreglo de productos
   const [arregloOrdenes, setArregloOrdenes] = useState([]);
-
   // Efecto para que se actualice los productos cuando cambie la subcategoria
   useEffect(() => bdOrdenes().then((arr) => {
     console.log(arr);
     setArregloOrdenes(arr);
   }), [subcategoria]);
-
   return (
-    <div className="Notificaciones">
+    <div className="Pedidos">
+      <BarraPrincipal vista="Pedidos" />
       <CabeceraUsuario />
-      <BarraSecundaria cat="Notificaciones" setSubcategoria={setSubcategoria} />
-      <div className="contenedorOrdenes">
-        {arregloOrdenes.map((orden) => <OrdenPendiente key={orden.numeroOrden} orden={orden} subcategoria={subcategoria} />)}
+      <BarraSecundaria cat="Pedidos" setSubcategoria={setSubcategoria} />
+      <div className="contenedorPedidos">
+        {arregloOrdenes.map((orden) => <PedidoPendiente key={orden.numeroOrden} orden={orden} subcategoria={subcategoria} />)}
       </div>
-
     </div>
   );
 }
