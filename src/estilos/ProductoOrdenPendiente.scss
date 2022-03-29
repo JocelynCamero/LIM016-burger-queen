@@ -1,0 +1,17 @@
+.ProductoOrdenPendiente , .ProductoPedidoPendiente{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.productoDetalle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+    width: 75%;
+}
+
+.texto{
+    margin: 0;
+}

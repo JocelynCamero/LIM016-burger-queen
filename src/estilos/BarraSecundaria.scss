@@ -1,0 +1,39 @@
+// Variables
+$color_azul_oscuro: #1F1D2B;
+$color_azul_claro: #252836;
+$color_verde: #3FAA86;
+$color_placeholder: #ABBBC2;
+$color_blanco: #FFFFFF;
+$color_anular: #FF7CA3;
+
+
+.BarraSecundaria{
+  margin-top: 15px;
+    width: 100%;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: stretch;
+  width: auto;
+  list-style: none;
+}
+
+.subCategoria{
+  background: transparent;
+  border-color: transparent;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  color: $color_blanco;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.subCategoria:active, .subCategoria:focus {
+  background: transparent;
+  color: $color_verde;
+}
