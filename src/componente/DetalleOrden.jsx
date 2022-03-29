@@ -1,5 +1,5 @@
 import React from 'react';
-import '../estilos/DetalleOrden.scss';
+import '../estilo/DetalleOrden.scss';
 
 export default function DetalleOrden() {
   return (

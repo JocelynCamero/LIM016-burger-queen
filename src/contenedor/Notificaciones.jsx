@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { obtenerOrdenesFiltradas } from '../firebase/firebaseStore';
-import CabeceraUsuario from '../componentes/CabeceraUsuario';
-import BarraSecundaria from '../componentes/BarraSecundaria';
-import OrdenPendiente from '../componentes/OrdenPendiente';
-import '../estilos/Notificaciones.scss';
+import CabeceraUsuario from '../componente/CabeceraUsuario';
+import BarraSecundaria from '../componente/BarraSecundaria';
+import OrdenPendiente from '../componente/OrdenPendiente';
+import '../estilo/Notificaciones.scss';
 
 export default function Notificaciones() {
   // Estado de la subcategoria

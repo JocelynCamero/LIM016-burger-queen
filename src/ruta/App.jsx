@@ -1,15 +1,14 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import '../estilos/App.scss';
-import InicioSesion from '../paginas/InicioSesion';
-import VistaMesero from '../paginas/VistaMesero';
-import VistaCocina from '../paginas/VistaCocina';
-import Desayuno from '../contenedores/Desayuno';
-import Almuerzo from '../contenedores/Almuerzo';
-import Notificaciones from '../contenedores/Notificaciones';
-import Pedidos from '../contenedores/Pedidos';
-import AppContext from '../context/AppContext';
-import useInitialState from '../hooks/useInitialState';
+import '../estilo/App.scss';
+import InicioSesion from '../pagina/InicioSesion';
+import VistaMesero from '../pagina/VistaMesero';
+import Desayuno from '../contenedor/Desayuno';
+import Almuerzo from '../contenedor/Almuerzo';
+import Notificaciones from '../contenedor/Notificaciones';
+import Pedidos from '../contenedor/Pedidos';
+import AppContext from '../contexto/AppContext';
+import useInitialState from '../hook/useInitialState';
 
 function App() {
   const initialState = useInitialState();
@@ -23,9 +22,7 @@ function App() {
             <Route path="/VistaMesero/Almuerzo" element={<Almuerzo />} />
             <Route path="/VistaMesero/Notificaciones" element={<Notificaciones />} />
           </Route>
-          <Route path="/VistaCocina" element={<VistaCocina />}>
-            <Route path="/VistaCocina/Pedidos" element={<Pedidos />} />
-          </Route>
+          <Route path="/Pedidos" element={<Pedidos />} />
         </Routes>
       </div>
     </AppContext.Provider>

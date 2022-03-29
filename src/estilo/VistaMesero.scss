@@ -1,0 +1,20 @@
+.VistaMesero, .VistaCocina ,.Pedido {
+    display: flex;
+    flex-direction: row;
+    background: #252836;
+    color: aliceblue;
+    width: 1194px;
+    height: 834px;
+}
+
+.Pedidos{
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 834px;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: flex-start;
+
+}

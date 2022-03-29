@@ -1,5 +1,5 @@
 import React from 'react';
-import '../estilos/BarraSecundaria.scss';
+import '../estilo/BarraSecundaria.scss';
 
 export default function BarraSecundaria({ cat, setSubcategoria }) {
   // Funcion para obtener las subcategorias
@@ -8,7 +8,7 @@ export default function BarraSecundaria({ cat, setSubcategoria }) {
     if (categoria === 'Desayuno') subcategorias = ['Cafe', 'Sandwich', 'Jugos'];
     if (categoria === 'Almuerzo') subcategorias = ['Hamburguesa', 'Bebidas', 'Acompañamientos'];
     if (categoria === 'Notificaciones') subcategorias = ['Por entregar', 'Entregado'];
-    if (categoria === 'Pedidos') subcategorias = ['Recibidos', 'Preparados'];
+    if (categoria === 'Pedidos') subcategorias = ['Por preparar', 'Preparado'];
     return subcategorias;
   };
 

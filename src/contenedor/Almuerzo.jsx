@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import BarraSecundaria from '../componentes/BarraSecundaria';
-import Producto from '../componentes/Producto';
+import BarraSecundaria from '../componente/BarraSecundaria';
+import Producto from '../componente/Producto';
 import Orden from './Orden';
-import CabeceraUsuario from '../componentes/CabeceraUsuario';
+import CabeceraUsuario from '../componente/CabeceraUsuario';
 import { obtenerProductos } from '../firebase/firebaseStore';
-import '../estilos/Desayuno.scss';
+import '../estilo/Desayuno.scss';
 
 export default function Almuerzo() {
   // Estado de la subcategoria

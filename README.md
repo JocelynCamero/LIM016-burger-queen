@@ -4,7 +4,10 @@
 
 ## 📌 Descripcion del proyecto
 
-Hot Burguer es una aplicacion creada para los meseros y jefes de cocina de una hamburgueseria, la cual hara que la coordinacion entre los dos puestos de trabajo se lleve de una mejor manera.
+Hot Burguer es una aplicacion creada para optimizar y mejorar el proceso de toma de pedidos y envio de comandas a cocina en establecimientos de comida rápida.
+
+
+los meseros y jefes de cocina de una hamburgueseria, la cual hara que la coordinacion entre los dos puestos de trabajo se lleve de una mejor manera.
 
  ### Roles
  Mesero : Personal que registra las ordenes de los clientes.
@@ -83,7 +86,9 @@ HU 3:  Meserx debe ver pedidos listos para servir
 ### Estudio de Usuario 
 🔎 ¿Quienes son los principales usuarios?
  Los usuarios de nuestra app serian el personal que ocupa el puesto de mesero y jefe de cocina
-🔎 ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+🔎 ¿Cuáles son los objetivos de es
+Sus principales beneficios:
+Genera el envio de la infomación en tiempo real.tos usuarios en relación con el producto?
 🔎 ¿Cuáles son las secciones más relevantes que quieren ver en la interfaz? y ¿por qué?
 🔎 ¿Cuándo utilizan o utilizarían el producto?
 

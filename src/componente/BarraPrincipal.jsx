@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCoffee, faBurger, faBell, faArrowRightFromBracket, faClipboardList,
 } from '@fortawesome/free-solid-svg-icons';
-import '../estilos/BarraPrincipal.scss';
+import '../estilo/BarraPrincipal.scss';
 
 export default function BarraPrincipal({ vista }) {
   const cambiarCategoria = () => {
@@ -16,7 +16,7 @@ export default function BarraPrincipal({ vista }) {
         [faBell, '/VistaMesero/Notificaciones'],
         [faArrowRightFromBracket, '/']];
     }
-    if (vista === 'VistaCocina') categoria = [[faClipboardList, '/VistaCocina/Pedidos'], [faArrowRightFromBracket, '/']];
+    if (vista === 'Pedidos') categoria = [[faClipboardList, '/Pedidos'], [faArrowRightFromBracket, '/']];
     return categoria;
   };
   return (

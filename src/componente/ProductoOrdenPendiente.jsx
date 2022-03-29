@@ -1,9 +1,9 @@
 import React from 'react';
-import '../estilos/ProductoOrdenPendiente.scss';
+import '../estilo/ProductoOrdenPendiente.scss';
 
-export default function ProductoPedidoPendiente({ producto }) {
+export default function ProductoOrdenPendiente({ producto }) {
   return (
-    <div className="ProductoPedidoPendiente">
+    <div className="ProductoOrdenPendiente">
       <div className="productoDetalle">
         <p className="texto">{producto.nombre}</p>
       </div>
