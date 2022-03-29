@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 // Estado inicial de la orden
 const estadoInicial = {
   numeroOrden: '',
-  nombreCli: '',
+  nombreCli: 'Luciana',
   numeroMesa: '',
   nombreMesero: '',
   productosAgregados: [],
@@ -66,7 +66,7 @@ const useEstadoInicial = () => {
   const obtenerNombreCliente = (nombCliente) => {
     console.log(nombCliente);
     console.log('entra a la funcion');
-    setOrden({ ...orden, nombreCli: nombCliente });
+    setOrden({ ...orden, nombreCli: 'nombCliente' });
   };
 
   // Funcion que obtiene el numero de la mesa

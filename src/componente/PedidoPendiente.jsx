@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductoPedidoPendiente from './ProductoPedidoPendiente';
-import '../estilos/OrdenPendiente.scss';
+import '../estilo/OrdenPendiente.scss';
 
 export default function PedidoPendiente({ orden }) {
   return (

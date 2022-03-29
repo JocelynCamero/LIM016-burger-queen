@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import AppContext from '../contextos/AppContext';
-import '../estilos/Producto.scss';
+import AppContext from '../contexto/AppContext';
+import '../estilo/Producto.scss';
 
 export default function Producto({ producto }) {
   const { agregarProducto } = useContext(AppContext);

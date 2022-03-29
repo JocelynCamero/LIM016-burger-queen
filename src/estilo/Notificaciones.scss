@@ -11,6 +11,8 @@ $color_anular: #FF7CA3;
     display: flex;
     flex-direction: column;
     background-color: $color_azul_claro;
+    height: 834px;
+    flex-wrap: wrap;
 }
 .contenedorOrdenes {
     display: flex;
