@@ -8,6 +8,7 @@ import {
   getDocs,
   addDoc,
   updateDoc,
+  orderBy,
 } from './firebaseConfig';
 
 // Funcion para obtener el usuario de la db
@@ -33,7 +34,11 @@ export const obtenerOrdenes = async () => {
 
 // Funcion para obtener las ordenes filtradas
 export const obtenerOrdenesFiltradas = async (estado) => {
-  const q = query(collection(db, 'ordenes'), where('estado', '==', estado));
+  const q = query(
+    collection(db, 'ordenes'),
+    orderBy('timestamp', 'asc'),
+    where('estado', '==', estado),
+  );
   const querySnapshot = await getDocs(q);
   return querySnapshot;
 };
