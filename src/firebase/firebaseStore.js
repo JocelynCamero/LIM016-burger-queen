@@ -1,4 +1,3 @@
-import { addDoc } from 'firebase/firestore';
 import {
   db,
   doc,
@@ -7,6 +6,8 @@ import {
   query,
   where,
   getDocs,
+  addDoc,
+  updateDoc,
 } from './firebaseConfig';
 
 // Funcion para obtener el usuario de la db
@@ -47,8 +48,12 @@ export const guardarData = async (orden) => {
     timestamp: new Date(),
     total: orden.totalOrden,
     productosAgregados: orden.productosAgregados,
-    estado: 'Por entregar',
+    estado: 'Por preparar',
   });
   console.log('Se guardo publicacion en la db con el id: ', docRefOrden.id);
   return docRefOrden;
 };
+
+export const actualizarEstadoPedido = async (id, estadoPedido) => updateDoc(doc(db, 'ordenes', id), {
+  estado: estadoPedido,
+});

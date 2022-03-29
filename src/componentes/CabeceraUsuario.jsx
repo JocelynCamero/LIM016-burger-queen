@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import AppContext from '../context/AppContext';
+import AppContext from '../contextos/AppContext';
 import Hora from './Hora';
 import '../estilos/CabeceraUsuario.scss';
 

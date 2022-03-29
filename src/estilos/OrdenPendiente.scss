@@ -18,7 +18,7 @@ $color_anular: #FF7CA3;
     padding: 1rem;
 }
 
-.ordenMesero, .PedidoCocina{
+.ordenMesero{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -63,4 +63,26 @@ $color_anular: #FF7CA3;
      border-radius: 5px;
 }
 
+.PedidoCocinaA{
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+
+.PedidoCocinaB{
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.ContenedorCabecera{
+
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+
+}

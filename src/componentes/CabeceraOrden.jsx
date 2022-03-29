@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import AppContext from '../context/AppContext';
+import AppContext from '../contextos/AppContext';
 import { obtenerOrdenes } from '../firebase/firebaseStore';
 import '../estilos/CabeceraOrden.scss';
 

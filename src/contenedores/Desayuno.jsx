@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import BarraSecundaria from '../Componentes/BarraSecundaria';
-import Producto from '../Componentes/Producto';
+import BarraSecundaria from '../componentes/BarraSecundaria';
+import Producto from '../componentes/Producto';
 import Orden from './Orden';
-import CabeceraUsuario from '../Componentes/CabeceraUsuario';
+import CabeceraUsuario from '../componentes/CabeceraUsuario';
 import { obtenerProductos } from '../firebase/firebaseStore';
 import '../estilos/Desayuno.scss';
 

@@ -11,8 +11,10 @@ $color_anular: #FF7CA3;
     display: flex;
     flex-direction: column;
     background-color: $color_azul_claro;
+    height: 834px;
+    flex-wrap: wrap;
 }
-.contenedorOrdenes{
+.contenedorOrdenes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -22,4 +24,16 @@ $color_anular: #FF7CA3;
     height: 600px;
     align-items: flex-start;
     width: 85%;
+}
+.contenedorPedidos{
+
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 600px;
+    align-items: flex-start;
+    width: 90%;
+    justify-content: space-around;
+    color: aliceblue;
 }

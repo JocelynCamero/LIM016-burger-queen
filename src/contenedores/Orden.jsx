@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import AppContext from '../context/AppContext';
+import AppContext from '../contextos/AppContext';
 import { guardarData } from '../firebase/firebaseStore';
 import CabeceraOrden from '../componentes/CabeceraOrden';
 import FormularioOrden from '../componentes/FormularioOrden';

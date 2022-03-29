@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import BarraPrincipal from '../Componentes/BarraPrincipal';
-import '../Estilos/VistaMesero.scss';
+import BarraPrincipal from '../componentes/BarraPrincipal';
+import '../estilos/VistaMesero.scss';
 
 export default function VistaMesero() {
   return (

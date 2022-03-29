@@ -2,7 +2,7 @@ import React, { useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import AppContext from '../context/AppContext';
+import AppContext from '../contextos/AppContext';
 import { iniciarSesion } from '../firebase/firebaseAuth';
 import { obtenerUsuario } from '../firebase/firebaseStore';
 import logo from '../imagenes/logoHamburguesa.svg';
@@ -26,7 +26,7 @@ export default function InicioSesion() {
           obtenerNombreMesero(docu.nombre);
           console.log(docu.rol);
           if (docu.rol === 'Mesero') navigate('/VistaMesero/Desayuno');
-          else navigate('/VistaCocina');
+          else navigate('/Pedidos');
         });
       })
       .catch((e) => console.log('Hubo un error en la authenticacion', e));
