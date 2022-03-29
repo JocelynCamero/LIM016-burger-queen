@@ -8,13 +8,14 @@ import '../estilos/Notificaciones.scss';
 
 export default function Pedidos() {
   const [subcategoria, setSubcategoria] = useState('Por preparar');
+  const [actualizandoEstado, setActualizandoEstado] = useState(true);
 
   // Funcion obtener productos de Firestore
   const bdOrdenes = async () => {
     const querySnapshot = await obtenerOrdenesFiltradas(subcategoria);
     const arrOrdenes = [];
     querySnapshot.forEach((docu) => {
-      arrOrdenes.push(docu.data());
+      arrOrdenes.push({ ...docu.data(), id: docu.id });
     });
     return arrOrdenes;
   };
@@ -24,15 +25,16 @@ export default function Pedidos() {
   // Efecto para que se actualice los productos cuando cambie la subcategoria
   useEffect(() => bdOrdenes().then((arr) => {
     console.log(arr);
+    setActualizandoEstado(false);
     setArregloOrdenes(arr);
-  }), [subcategoria]);
+  }), [subcategoria, actualizandoEstado]);
   return (
     <div className="Pedidos">
       <BarraPrincipal vista="Pedidos" />
       <CabeceraUsuario />
       <BarraSecundaria cat="Pedidos" setSubcategoria={setSubcategoria} />
       <div className="contenedorPedidos">
-        {arregloOrdenes.map((orden) => <PedidoPendiente key={orden.numeroOrden} orden={orden} subcategoria={subcategoria} />)}
+        {arregloOrdenes.map((orden) => <PedidoPendiente key={orden.numeroOrden} orden={orden} setActualizandoEstado={setActualizandoEstado} subcategoria={subcategoria} />)}
       </div>
     </div>
   );
