@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
-import AppContext from '../contexto/AppContext';
+import AppContext from '../contextos/AppContext';
 import { obtenerOrdenes } from '../firebase/firebaseStore';
-import '../estilo/CabeceraOrden.scss';
+import '../estilos/CabeceraOrden.scss';
 
 export default function CabeceraOrden() {
   const { orden, obtenerNumeroOrden } = useContext(AppContext);
