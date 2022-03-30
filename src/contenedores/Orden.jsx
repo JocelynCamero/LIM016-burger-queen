@@ -44,7 +44,6 @@ export default function Orden() {
           Enviar a cocinero
 
         </button>
-        <button type="button" onClick={() => console.log(orden)}>verificar orden</button>
       </div>
     </div>
   );

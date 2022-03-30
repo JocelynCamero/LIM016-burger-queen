@@ -36,8 +36,8 @@ export const obtenerOrdenes = async () => {
 export const obtenerOrdenesFiltradas = async (estado) => {
   const q = query(
     collection(db, 'ordenes'),
-    orderBy('timestamp', 'asc'),
-    where('estado', '==', estado),
+    orderBy('horaIngreso', 'asc'),
+    where('estadoC', '==', estado),
   );
   const querySnapshot = await getDocs(q);
   return querySnapshot;
@@ -50,15 +50,19 @@ export const guardarData = async (orden) => {
     nombreCliente: orden.nombreCli,
     numeroMesa: orden.numeroMesa,
     nombreMesero: orden.nombreMesero,
-    timestamp: new Date(),
+    horaIngreso: new Date(),
     total: orden.totalOrden,
     productosAgregados: orden.productosAgregados,
-    estado: 'Por preparar',
+    estadoC: 'Por preparar',
   });
   console.log('Se guardo publicacion en la db con el id: ', docRefOrden.id);
   return docRefOrden;
 };
 
-export const actualizarEstadoPedido = async (id, estadoPedido) => updateDoc(doc(db, 'ordenes', id), {
-  estado: estadoPedido,
-});
+export const actualizarEstadoPedido = async (id, estadoPedidoC, estadoPedidoM) => {
+  updateDoc(doc(db, 'ordenes', id), {
+    estadoC: estadoPedidoC,
+    estadoM: estadoPedidoM,
+    horaSalida: new Date(),
+  });
+};

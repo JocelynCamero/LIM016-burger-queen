@@ -14,37 +14,45 @@ export default function PedidoPendiente({ orden, setActualizandoEstado }) {
           </p>
           <p className="nombreCliente">
             <span className="negrita">Cliente: </span>
-            Hora
+            Pepito
           </p>
           <p className="nombreMesero">
             <span className="negrita">Mesero: </span>
-            {orden.numeroMesa}
+            {orden.nombreMesero}
           </p>
         </div>
         <div className="PedidoCocinaB">
           <p className="hora">
-            <span className="negrita">Hora: </span>
-            Fecha
+            <span className="negrita">Fecha Ing:  </span>
+            {orden.horaIngreso.seconds}
           </p>
+          {orden.estadoC === 'Preparado'
+            ? (
+              <div>
+                <p key={orden.numeroOrden}>
+                  <span className="negrita"> Fecha Fin:</span>
+                  {orden.horaSalida.seconds}
+                </p>
+                <p className="tiempoDuracion">
+                  <span className="negrita">Duración:  </span>
+                  {((orden.horaSalida.seconds - orden.horaIngreso.seconds) / 60).toFixed(0)}
+                  {' '}
+                  Min
+                </p>
+              </div>
+            )
+            : ''}
 
-          <p className="numeroMesa">
-            <span className="negrita">Mesa: </span>
-            Fecha
-          </p>
-          <p className="fecha">
-            <span className="negrita">Fecha: </span>
-            Fecha
-          </p>
         </div>
       </div>
       <div className="contenedorProductosPendientes">
         {orden.productosAgregados.map((producto) => <ProductoPedidoPendiente key={producto.id} producto={producto} />)}
       </div>
-      {orden.estado === 'Por preparar' ? (
+      {orden.estadoC === 'Por preparar' ? (
         <button
           type="button"
           className="btnEntregar"
-          onClick={() => { actualizarEstadoPedido(orden.id, 'Preparado'); setActualizandoEstado(true); }}
+          onClick={() => { actualizarEstadoPedido(orden.id, 'Preparado', 'Por entregar'); setActualizandoEstado(true); }}
         >
           Preparado
         </button>
