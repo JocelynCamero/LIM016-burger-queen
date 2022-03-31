@@ -27,3 +27,16 @@ $color_anular: #FF7CA3;
     scroll-behavior: smooth;
     height: 834px;
 }
+
+
+
+.contenedorProductos::-webkit-scrollbar{
+    width: 7px;
+    margin: 4px;
+
+}
+
+.contenedorProductos::-webkit-scrollbar-thumb{
+     background-color: $color_verde;
+     border-radius: 5px;
+}

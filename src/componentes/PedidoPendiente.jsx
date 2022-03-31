@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductoPedidoPendiente from './ProductoPedidoPendiente';
-import { actualizarEstadoPedido } from '../firebase/firebaseStore';
+import { actualizarEstadoPedidoC } from '../firebase/firebaseStore';
 import '../estilos/OrdenPendiente.scss';
 
 export default function PedidoPendiente({ orden, setActualizandoEstado }) {
@@ -54,7 +54,7 @@ export default function PedidoPendiente({ orden, setActualizandoEstado }) {
         <button
           type="button"
           className="btnEntregar"
-          onClick={() => { actualizarEstadoPedido(orden.id, 'Preparado', 'Por entregar'); setActualizandoEstado(true); }}
+          onClick={() => { actualizarEstadoPedidoC(orden.id); setActualizandoEstado(true); }}
         >
           Preparado
         </button>

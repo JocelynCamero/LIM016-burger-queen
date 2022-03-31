@@ -24,11 +24,11 @@ export default function FormularioOrden() {
         onChange={(e) => funcionObtenerDatos(e)}
       />
       <select name="mesa" ref={numMesaRef} className="mesa" onChange={(e) => funcionObtenerDatos(e)}>
-        <option value="Mesa 1">Seleccione la mesa</option>
-        <option value="Mesa 1">Mesa 1</option>
-        <option value="Mesa 2">Mesa 2</option>
-        <option value="Mesa 3">Mesa 3</option>
-        <option value="Mesa 4">Mesa 4</option>
+        <option value="1">Seleccione la mesa</option>
+        <option value="1">Mesa 1</option>
+        <option value="2">Mesa 2</option>
+        <option value="3">Mesa 3</option>
+        <option value="4">Mesa 4</option>
       </select>
     </form>
   );
