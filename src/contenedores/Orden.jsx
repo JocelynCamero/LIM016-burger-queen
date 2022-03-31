@@ -10,7 +10,7 @@ import '../estilos/Orden.scss';
 
 export default function Orden() {
   const navigate = useNavigate();
-  const { orden } = useContext(AppContext);
+  const { orden, limpiarOrden } = useContext(AppContext);
 
   return (
     <div className="Orden">
@@ -38,6 +38,7 @@ export default function Orden() {
           onClick={() => {
             console.log(orden);
             guardarData(orden);
+            limpiarOrden();
             navigate('/VistaMesero/Desayuno');
           }}
         >
