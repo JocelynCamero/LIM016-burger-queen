@@ -11,11 +11,11 @@ export default function CabeceraOrden() {
     // console.log(arrOrdenes);
     const numeroOrd = arrOrdenes.length + 1;
     const numOrden = `001-00000${numeroOrd}`;
-    console.log(numOrden);
+    // console.log(numOrden);
     return numOrden;
   };
 
-  useEffect(() => numeracionOrden().then((numOrden) => obtenerNumeroOrden(numOrden)), []);
+  useEffect(() => numeracionOrden().then((numOrden) => obtenerNumeroOrden(numOrden)), [orden.numeroMesa]);
 
   return (
     <div className="CabeceraOrden">

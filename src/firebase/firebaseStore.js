@@ -28,7 +28,7 @@ export const obtenerOrdenes = async () => {
   querySnapshot.forEach((docu) => {
     arrOrdenes.push(docu.data());
   });
-  console.log(arrOrdenes);
+  // console.log(arrOrdenes);
   return arrOrdenes;
 };
 
@@ -55,7 +55,7 @@ export const guardarData = async (orden) => {
     productosAgregados: orden.productosAgregados,
     estadoC: 'Por preparar',
   });
-  console.log('Se guardo publicacion en la db con el id: ', docRefOrden.id);
+  // console.log('Se guardo publicacion en la db con el id: ', docRefOrden.id);
   return docRefOrden;
 };
 

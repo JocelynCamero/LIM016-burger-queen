@@ -7,7 +7,7 @@ import AppContext from '../contextos/AppContext';
 export default function ProductoOrden({ product }) {
   const { eliminarProducto, aumentarCantidad, disminuirCantidad } = useContext(AppContext);
   const handleRemove = (producto) => {
-    console.log('estoy eliminando');
+    // console.log('estoy eliminando');
     eliminarProducto(producto);
   };
 

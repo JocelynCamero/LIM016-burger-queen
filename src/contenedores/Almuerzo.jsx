@@ -25,7 +25,7 @@ export default function Almuerzo() {
 
   // Efecto para que se actualice los productos cuando cambie la subcategoria
   useEffect(() => bdProductos().then((arr) => {
-    console.log(arr);
+    //  console.log(arr);
     setArregloProductos(arr);
   }), [subcategoria]);
 

@@ -21,15 +21,15 @@ export default function InicioSesion() {
 
     iniciarSesion(correo, contraseña)
       .then((credencialUsuario) => {
-        console.log('inicio sesion');
+        // console.log('inicio sesion');
         obtenerUsuario(credencialUsuario.user.uid).then((docu) => {
           obtenerNombreMesero(docu.nombre);
-          console.log(docu.rol);
+          //  console.log(docu.rol);
           if (docu.rol === 'Mesero') navigate('/VistaMesero/Desayuno');
           else navigate('/Pedidos');
         });
-      })
-      .catch((e) => console.log('Hubo un error en la authenticacion', e));
+      });
+    // .catch(() => console.log('Hubo un error en la authenticacion', e))
   };
 
   return (

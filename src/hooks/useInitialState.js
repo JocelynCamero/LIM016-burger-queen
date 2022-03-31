@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 // Estado inicial de la orden
 const estadoInicial = {
   numeroOrden: '',
-  nombreCli: 'Luciana',
+  nombreCli: '',
   numeroMesa: '',
   nombreMesero: '',
   productosAgregados: [],
@@ -64,14 +64,14 @@ const useEstadoInicial = () => {
 
   // Funcion que obtiene el nombre del cliente
   const obtenerNombreCliente = (nombCliente) => {
-    console.log(nombCliente);
-    console.log('entra a la funcion');
+    //  console.log(nombCliente);
+    //  console.log('entra a la funcion');
     setOrden({ ...orden, nombreCli: nombCliente });
   };
 
   // Funcion que obtiene el numero de la mesa
   const obtenerNumeroMesa = (nunMesa) => {
-    console.log(nunMesa);
+    //  console.log(nunMesa);
     setOrden({ ...orden, numeroMesa: nunMesa });
   };
 
@@ -86,9 +86,9 @@ const useEstadoInicial = () => {
   };
 
   // Funcion que limpia los campos de la orden
-  // const limpiarOrden = () => {
-  //   setOrden(estadoInicial);
-  // };
+  const limpiarOrden = () => {
+    setOrden(estadoInicial);
+  };
 
   return {
     orden,
@@ -101,7 +101,7 @@ const useEstadoInicial = () => {
     obtenerNumeroMesa,
     obtenerNumeroOrden,
     obtenerNombreMesero,
-    // limpiarOrden,
+    limpiarOrden,
   };
 };
 
