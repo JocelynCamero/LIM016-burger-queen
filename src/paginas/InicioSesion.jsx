@@ -28,8 +28,8 @@ export default function InicioSesion() {
           if (docu.rol === 'Mesero') navigate('/VistaMesero/Desayuno');
           else navigate('/Pedidos');
         });
-      })
-      .catch((e) => console.log('Hubo un error en la authenticacion', e));
+      });
+    // .catch(() => console.log('Hubo un error en la authenticacion', e))
   };
 
   return (
