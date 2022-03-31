@@ -18,7 +18,7 @@ export default function FormularioOrden() {
         onChange={() => obtenerNombreCliente(nomClienteRef.current.value)}
       />
       <select name="mesa" ref={numMesaRef} value={orden.numeroMesa} className="mesa" onChange={() => obtenerNumeroMesa(numMesaRef.current.value)}>
-        <option value="1">Seleccione la mesa</option>
+        <option value="0">Seleccione la mesa</option>
         <option value="1">Mesa 1</option>
         <option value="2">Mesa 2</option>
         <option value="3">Mesa 3</option>

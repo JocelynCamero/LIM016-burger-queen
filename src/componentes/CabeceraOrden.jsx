@@ -15,7 +15,7 @@ export default function CabeceraOrden() {
     return numOrden;
   };
 
-  useEffect(() => numeracionOrden().then((numOrden) => obtenerNumeroOrden(numOrden)), []);
+  useEffect(() => numeracionOrden().then((numOrden) => obtenerNumeroOrden(numOrden)), [orden.numeroMesa]);
 
   return (
     <div className="CabeceraOrden">

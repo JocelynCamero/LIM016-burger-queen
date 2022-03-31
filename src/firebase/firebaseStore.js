@@ -28,7 +28,7 @@ export const obtenerOrdenes = async () => {
   querySnapshot.forEach((docu) => {
     arrOrdenes.push(docu.data());
   });
-  console.log(arrOrdenes);
+  // console.log(arrOrdenes);
   return arrOrdenes;
 };
 
