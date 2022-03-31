@@ -24,7 +24,7 @@ export default function Pedidos() {
   const [arregloOrdenes, setArregloOrdenes] = useState([]);
   // Efecto para que se actualice los productos cuando cambie la subcategoria
   useEffect(() => bdOrdenes().then((arr) => {
-    console.log(arr);
+  // console.log(arr);
     setActualizandoEstado(false);
     setArregloOrdenes(arr);
   }), [subcategoria, actualizandoEstado]);

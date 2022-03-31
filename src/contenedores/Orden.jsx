@@ -36,7 +36,7 @@ export default function Orden() {
           className="btnTotal"
           type="button"
           onClick={() => {
-            console.log(orden);
+          //  console.log(orden);
             guardarData(orden);
             limpiarOrden();
             navigate('/VistaMesero/Desayuno');

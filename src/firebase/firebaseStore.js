@@ -55,7 +55,7 @@ export const guardarData = async (orden) => {
     productosAgregados: orden.productosAgregados,
     estadoC: 'Por preparar',
   });
-  console.log('Se guardo publicacion en la db con el id: ', docRefOrden.id);
+  // console.log('Se guardo publicacion en la db con el id: ', docRefOrden.id);
   return docRefOrden;
 };
 

@@ -5,7 +5,7 @@ import '../estilos/OrdenPendiente.scss';
 
 export default function PedidoPendiente({ orden, setActualizandoEstado }) {
   const hIngreso = new Date(orden.horaIngreso.seconds * 1000).toString().slice(3, -32);
-  console.log(typeof hIngreso);
+  // console.log(typeof hIngreso);
   return (
     <div className="PedidoPendiente">
       <div className="ContenedorCabecera">

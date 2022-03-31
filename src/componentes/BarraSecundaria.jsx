@@ -15,7 +15,7 @@ export default function BarraSecundaria({ cat, setSubcategoria }) {
   // Funcion para pobtener la categoria seleccionada
   const obtenerCategoria = (e) => {
     const categoriaActual = e.target.value;
-    console.log(categoriaActual);
+    // console.log(categoriaActual);
     return setSubcategoria(categoriaActual);
   };
 

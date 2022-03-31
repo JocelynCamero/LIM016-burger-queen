@@ -24,10 +24,10 @@ export default function Notificaciones() {
   const [arregloOrdenes, setArregloOrdenes] = useState([]);
   // Efecto para que se actualice los productos cuando cambie la subcategoria
   useEffect(() => bdOrdenes().then((arr) => {
-    console.log(arr);
+    // console.log(arr);
     setActualizandoEstado(false);
     setArregloOrdenes(arr);
-    console.log(arregloOrdenes);
+    // console.log(arregloOrdenes);
   }), [subcategoria, actualizandoEstado]);
 
   return (

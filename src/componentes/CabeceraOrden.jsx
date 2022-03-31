@@ -11,7 +11,7 @@ export default function CabeceraOrden() {
     // console.log(arrOrdenes);
     const numeroOrd = arrOrdenes.length + 1;
     const numOrden = `001-00000${numeroOrd}`;
-    console.log(numOrden);
+    // console.log(numOrden);
     return numOrden;
   };
 
