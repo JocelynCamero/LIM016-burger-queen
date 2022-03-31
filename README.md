@@ -4,21 +4,21 @@
 
 ## 📌 Descripcion del proyecto
 
-Hot Burguer es una aplicacion creada para optimizar y mejorar el proceso de toma de pedidos y envio de comandas a cocina en establecimientos de comida rápida.
-
-
-los meseros y jefes de cocina de una hamburgueseria, la cual hara que la coordinacion entre los dos puestos de trabajo se lleve de una mejor manera.
+Hot Burguer es una aplicacion creada para optimizar y mejorar el proceso de toma de pedidos y envio de comandas a cocina en un establecimientos de comida rápida.
 
  ### Roles
- Mesero : Personal que registra las ordenes de los clientes.
- Jefe de cocina : Personal que prepara las ordenes de lo clientes.
+ + Mesero : Colaborador que registra las ordenes de los clientes.
+ + Jefe de cocina : Colaborador que prepara las ordenes de lo clientes.
 
 
 ### Vistas
 Inicio de sesion
+
+[![React-App-Avast-Secure-Browser-30-03-2022-09-34-54-2.png](https://i.postimg.cc/J0H6SgN7/React-App-Avast-Secure-Browser-30-03-2022-09-34-54-2.png)](https://postimg.cc/bS89tmV4)
+
 Mesero - Desayuno
 Mesero - Almuerzo
-esero - Notificaciones
+Mesero - Notificaciones
 
 Cocina - Registro de ordenes
 
@@ -26,7 +26,6 @@ Cocina - Registro de ordenes
 * Vista Desktop 💻
 
 * Vista Tablet 
-
 
 
 ### Historias de Usuario y Criterios de Aceptación 
@@ -85,11 +84,21 @@ HU 3:  Meserx debe ver pedidos listos para servir
 
 ### Estudio de Usuario 
 🔎 ¿Quienes son los principales usuarios?
- Los usuarios de nuestra app serian el personal que ocupa el puesto de mesero y jefe de cocina
-🔎 ¿Cuáles son los objetivos de es
-Sus principales beneficios:
-Genera el envio de la infomación en tiempo real.tos usuarios en relación con el producto?
+ 
+ Los usuarios de nuestra app serian el personal que ocupa el puesto de mesero y jefe de cocina.
+
+🔎 ¿Cuáles son los objetivos de los usuarios en relación con el producto?
+
++ Generar el envio de la infomación en tiempo real.
++ Sustituir la emisión de ordenes físicas.
++ Reducir el margen de error en la toma de  pedidos.
++ Mayor control en los tiempos de atención.
++ Sistematización de la información.
+
+
 🔎 ¿Cuáles son las secciones más relevantes que quieren ver en la interfaz? y ¿por qué?
+
+
 🔎 ¿Cuándo utilizan o utilizarían el producto?
 
 ## Índice

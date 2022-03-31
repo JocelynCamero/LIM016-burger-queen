@@ -4,6 +4,8 @@ import { actualizarEstadoPedido } from '../firebase/firebaseStore';
 import '../estilos/OrdenPendiente.scss';
 
 export default function PedidoPendiente({ orden, setActualizandoEstado }) {
+  const hIngreso = new Date(orden.horaIngreso.seconds * 1000).toString().slice(3, -32);
+  console.log(typeof hIngreso);
   return (
     <div className="PedidoPendiente">
       <div className="ContenedorCabecera">
@@ -24,14 +26,14 @@ export default function PedidoPendiente({ orden, setActualizandoEstado }) {
         <div className="PedidoCocinaB">
           <p className="hora">
             <span className="negrita">Fecha Ing:  </span>
-            {orden.horaIngreso.seconds}
+            {hIngreso}
           </p>
           {orden.estadoC === 'Preparado'
             ? (
               <div>
                 <p key={orden.numeroOrden}>
                   <span className="negrita"> Fecha Fin:</span>
-                  {orden.horaSalida.seconds}
+                  {new Date(orden.horaSalida.seconds * 1000).toString().slice(3, -32)}
                 </p>
                 <p className="tiempoDuracion">
                   <span className="negrita">Duración:  </span>

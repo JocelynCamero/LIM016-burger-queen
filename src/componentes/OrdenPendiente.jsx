@@ -1,8 +1,9 @@
 import React from 'react';
 import ProductoOrdenPendiente from './ProductoOrdenPendiente';
+import { actualizarEstadoPedido } from '../firebase/firebaseStore';
 import '../estilos/OrdenPendiente.scss';
 
-export default function OrdenPendiente({ orden }) {
+export default function OrdenPendiente({ orden, setActualizandoEstado }) {
   return (
     <div className="OrdenPendiente">
       <div className="ordenMesero">
@@ -22,7 +23,11 @@ export default function OrdenPendiente({ orden }) {
       <div className="contenedorProductosPendientes">
         {orden.productosAgregados.map((producto) => <ProductoOrdenPendiente key={producto.id} producto={producto} />)}
       </div>
-      {orden.estado === 'Por entregar' ? <button type="button" className="btnEntregar">Entregar</button> : ' '}
+      {orden.estado === 'Por entregar' ? (
+        <button type="button" className="btnEntregar" onClick={() => { actualizarEstadoPedido(orden.id, 'Preparado', 'Entregado'); setActualizandoEstado(true); }}>
+          Entregar
+        </button>
+      ) : ' '}
     </div>
   );
 }

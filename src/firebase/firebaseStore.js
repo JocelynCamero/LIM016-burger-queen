@@ -33,11 +33,11 @@ export const obtenerOrdenes = async () => {
 };
 
 // Funcion para obtener las ordenes filtradas
-export const obtenerOrdenesFiltradas = async (estado) => {
+export const obtenerOrdenesFiltradas = async (nombreEstado, estado) => {
   const q = query(
     collection(db, 'ordenes'),
     orderBy('horaIngreso', 'asc'),
-    where('estadoC', '==', estado),
+    where(nombreEstado, '==', estado),
   );
   const querySnapshot = await getDocs(q);
   return querySnapshot;
