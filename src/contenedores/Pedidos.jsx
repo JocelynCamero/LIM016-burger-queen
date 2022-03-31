@@ -12,7 +12,7 @@ export default function Pedidos() {
 
   // Funcion obtener productos de Firestore
   const bdOrdenes = async () => {
-    const querySnapshot = await obtenerOrdenesFiltradas(subcategoria);
+    const querySnapshot = await obtenerOrdenesFiltradas('estadoC', subcategoria);
     const arrOrdenes = [];
     querySnapshot.forEach((docu) => {
       arrOrdenes.push({ ...docu.data(), id: docu.id });

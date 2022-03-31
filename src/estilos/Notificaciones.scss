@@ -5,6 +5,7 @@ $color_coral: #EA7C69;
 $color_placeholder: #ABBBC2;
 $color_blanco: #FFFFFF;
 $color_anular: #FF7CA3;
+$color_verde: #3FAA86;
 
 .Notificaciones, .Pedidos{
     width: 93%;
@@ -18,13 +19,25 @@ $color_anular: #FF7CA3;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 2rem;
     overflow-y: scroll;
     scroll-behavior: smooth;
     height: 600px;
     align-items: flex-start;
-    width: 85%;
+    width: 100%;
 }
+
+
+.contenedorOrdenes::-webkit-scrollbar{
+    width: 7px;
+    margin: 4px;
+
+}
+
+.contenedorOrdenes::-webkit-scrollbar-thumb{
+     background-color: $color_verde;
+     border-radius: 5px;
+}
+
 .contenedorPedidos{
 
     display: flex;
