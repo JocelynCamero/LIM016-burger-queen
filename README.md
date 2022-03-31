@@ -96,9 +96,10 @@ HU 3:  Meserx debe ver pedidos listos para servir
 + Sistematización de la información.
 
 
+
 🔎 ¿Cuáles son las secciones más relevantes que quieren ver en la interfaz? y ¿por qué?
 
-
+"
 🔎 ¿Cuándo utilizan o utilizarían el producto?
 
 ## Índice
