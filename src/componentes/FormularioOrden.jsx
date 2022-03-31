@@ -7,13 +7,6 @@ export default function FormularioOrden() {
   const nomClienteRef = useRef();
   const numMesaRef = useRef();
 
-  // Funcion de obtener datos del formulario
-  const funcionObtenerDatos = (e) => {
-    e.preventDefault();
-    obtenerNombreCliente(nomClienteRef.current.value);
-    obtenerNumeroMesa(numMesaRef.current.value);
-  };
-
   return (
     <form className="FormularioOrden">
       <input
@@ -21,9 +14,9 @@ export default function FormularioOrden() {
         type="text"
         ref={nomClienteRef}
         placeholder="Nombre del cliente"
-        onChange={(e) => funcionObtenerDatos(e)}
+        onChange={() => obtenerNombreCliente(nomClienteRef.current.value)}
       />
-      <select name="mesa" ref={numMesaRef} className="mesa" onChange={(e) => funcionObtenerDatos(e)}>
+      <select name="mesa" ref={numMesaRef} className="mesa" onChange={() => obtenerNumeroMesa(numMesaRef.current.value)}>
         <option value="1">Seleccione la mesa</option>
         <option value="1">Mesa 1</option>
         <option value="2">Mesa 2</option>
