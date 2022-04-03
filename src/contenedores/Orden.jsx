@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import AppContext from '../contextos/AppContext';
 import { guardarData } from '../firebase/firebaseStore';
 import CabeceraOrden from '../componentes/CabeceraOrden';
@@ -9,8 +8,9 @@ import ProductoOrden from '../componentes/ProductoOrden';
 import '../estilos/Orden.scss';
 
 export default function Orden() {
-  const navigate = useNavigate();
-  const { orden, limpiarOrden } = useContext(AppContext);
+  const {
+    orden, limpiarOrden,
+  } = useContext(AppContext);
 
   return (
     <div className="Orden">
@@ -36,10 +36,8 @@ export default function Orden() {
           className="btnTotal"
           type="button"
           onClick={() => {
-          //  console.log(orden);
             guardarData(orden);
             limpiarOrden();
-            navigate('/VistaMesero/Desayuno');
           }}
         >
           Enviar a cocinero

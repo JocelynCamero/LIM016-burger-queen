@@ -4,7 +4,7 @@ import { obtenerOrdenes } from '../firebase/firebaseStore';
 import '../estilos/CabeceraOrden.scss';
 
 export default function CabeceraOrden() {
-  const { orden, obtenerNumeroOrden } = useContext(AppContext);
+  const { orden, obtenerNumeroOrden, usuario } = useContext(AppContext);
 
   const numeracionOrden = async () => {
     const arrOrdenes = await obtenerOrdenes();
@@ -29,7 +29,7 @@ export default function CabeceraOrden() {
       </div>
       <div className="contenedorNombreMesero">
         <h4 className="nombreMesero">
-          {orden.nombreMesero}
+          {usuario}
         </h4>
       </div>
     </div>

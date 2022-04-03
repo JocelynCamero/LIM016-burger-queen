@@ -7,7 +7,7 @@ const estadoInicial = {
   numeroOrden: '',
   nombreCli: '',
   numeroMesa: '',
-  nombreMesero: '',
+  nombreMesero: localStorage.getItem('usuario'),
   productosAgregados: [],
   totalOrden: 0,
 };
@@ -15,6 +15,13 @@ const estadoInicial = {
 const useEstadoInicial = () => {
   // Estado de la orden
   const [orden, setOrden] = useState(estadoInicial);
+
+  // Estado del nombre del usuario que inicio sesion
+  const [usuario, setUsuario] = useState('');
+
+  useEffect(() => {
+    setOrden({ ...orden, nombreMesero: usuario });
+  }, [usuario]);
 
   // Funcion de agregar producto a la orden
   const agregarProducto = (payload) => {
@@ -80,11 +87,6 @@ const useEstadoInicial = () => {
     setOrden({ ...orden, numeroOrden: numOrden });
   };
 
-  // Funcion que obtiene el nombre del mesero
-  const obtenerNombreMesero = (nomMesero) => {
-    setOrden({ ...orden, nombreMesero: nomMesero });
-  };
-
   // Funcion que limpia los campos de la orden
   const limpiarOrden = () => {
     setOrden(estadoInicial);
@@ -93,6 +95,8 @@ const useEstadoInicial = () => {
   return {
     orden,
     setOrden,
+    usuario,
+    setUsuario,
     agregarProducto,
     eliminarProducto,
     aumentarCantidad,
@@ -100,7 +104,6 @@ const useEstadoInicial = () => {
     obtenerNombreCliente,
     obtenerNumeroMesa,
     obtenerNumeroOrden,
-    obtenerNombreMesero,
     limpiarOrden,
   };
 };

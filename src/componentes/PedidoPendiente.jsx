@@ -16,7 +16,7 @@ export default function PedidoPendiente({ orden, setActualizandoEstado }) {
           </p>
           <p className="nombreCliente">
             <span className="negrita">Cliente: </span>
-            Pepito
+            {orden.nombreCliente}
           </p>
           <p className="nombreMesero">
             <span className="negrita">Mesero: </span>

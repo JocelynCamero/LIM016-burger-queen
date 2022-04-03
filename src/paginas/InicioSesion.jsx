@@ -2,15 +2,14 @@ import React, { useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import AppContext from '../contextos/AppContext';
 import { iniciarSesion } from '../firebase/firebaseAuth';
 import { obtenerUsuario } from '../firebase/firebaseStore';
+import AppContext from '../contextos/AppContext';
 import logo from '../imagenes/logoHamburguesa.svg';
 import '../estilos/InicioSesion.scss';
 
 export default function InicioSesion() {
-  const { obtenerNombreMesero } = useContext(AppContext);
-
+  const { setUsuario } = useContext(AppContext);
   const navigate = useNavigate();
   const correoRef = useRef();
   const contraRef = useRef();
@@ -21,9 +20,13 @@ export default function InicioSesion() {
 
     iniciarSesion(correo, contraseña)
       .then((credencialUsuario) => {
+        console.log(credencialUsuario);
+        // localStorage.setItem('user', response.data);
         // console.log('inicio sesion');
         obtenerUsuario(credencialUsuario.user.uid).then((docu) => {
-          obtenerNombreMesero(docu.nombre);
+          localStorage.clear();
+          localStorage.setItem('usuario', docu.nombre);
+          setUsuario(localStorage.getItem('usuario'));
           //  console.log(docu.rol);
           if (docu.rol === 'Mesero') navigate('/VistaMesero/Desayuno');
           else navigate('/Pedidos');
