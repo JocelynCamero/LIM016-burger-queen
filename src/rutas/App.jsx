@@ -6,7 +6,7 @@ import VistaMesero from '../paginas/VistaMesero';
 import Desayuno from '../contenedores/Desayuno';
 import Almuerzo from '../contenedores/Almuerzo';
 import Notificaciones from '../contenedores/Notificaciones';
-import Pedidos from '../contenedores/Pedidos';
+import Pedidos from '../paginas/Pedidos';
 import AppContext from '../contextos/AppContext';
 import useInitialState from '../hooks/useInitialState';
 
