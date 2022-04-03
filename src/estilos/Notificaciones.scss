@@ -7,24 +7,24 @@ $color_blanco: #FFFFFF;
 $color_anular: #FF7CA3;
 $color_verde: #3FAA86;
 
-.Notificaciones, .Pedidos{
-    width: 93%;
+.Notificaciones{
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: $color_azul_claro;
-    height: 834px;
+    height: 100vh;
     flex-wrap: wrap;
 }
-.contenedorOrdenes {
+
+.Pedidos{
+    width: 100vw;
     display: flex;
+    flex-direction: column;
+    background-color: $color_azul_claro;
+    height: 100vh;
     flex-wrap: wrap;
-    justify-content: center;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    height: 600px;
-    align-items: flex-start;
-    width: 100%;
 }
+
 
 
 .contenedorOrdenes::-webkit-scrollbar{
@@ -38,15 +38,26 @@ $color_verde: #3FAA86;
      border-radius: 5px;
 }
 
-.contenedorPedidos{
-
+.contenedorPedidos, .contenedorOrdenes{
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    height: 600px;
+    height: 70%;
     align-items: flex-start;
     width: 90%;
     justify-content: space-around;
     color: aliceblue;
+}
+
+
+.contenedorPedidos::-webkit-scrollbar{
+    width: 7px;
+    margin: 4px;
+
+}
+
+.contenedorPedidos::-webkit-scrollbar-thumb{
+     background-color: $color_verde;
+     border-radius: 5px;
 }

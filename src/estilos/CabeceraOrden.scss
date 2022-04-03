@@ -1,8 +1,15 @@
+// Variables
+$color_azul_oscuro: #1F1D2B;
+$color_azul_claro: #252836;
+$color_verde: #3FAA86;
+$color_placeholder: #ABBBC2;
+$color_blanco: #FFFFFF;
+$color_anular: #FF7CA3;
+
 .CabeceraOrden{
     width: 100%;
     display: flex;
     flex-direction: column;
-    
 }
 
 .detalleOrdenFecha{
@@ -13,11 +20,19 @@
     width: 100%;
 }
 
-.fecha{
+.texto{
+    font-family: "Barlow", sans-serif;
     margin-right: 2px;
+    font-size: 25px;
 }
 
 .contenedorNombreMesero{
     display: flex;
-    
+}
+.negritaTexto{
+    font-family: "Barlow", sans-serif;
+    margin-right: 2px;
+    font-size: 30px;
+    font-weight: bold;
+    color:$color_verde;
 }

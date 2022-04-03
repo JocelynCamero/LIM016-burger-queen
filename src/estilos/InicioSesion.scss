@@ -60,7 +60,8 @@ justify-content: center;
     // Etiquetas de correo y contraseña
    .Texto {
         color: $color_azul_oscuro;
-        font-size: 28px;
+        font-size: 3rem;
+        font-family: 'Barlow', sans-serif;
     }
     
     // Inputs
@@ -70,9 +71,10 @@ justify-content: center;
         border-bottom: 2px solid $color_azul_oscuro;
         outline: 0px;
         margin-bottom: 8px;
-        font-size: 22px;
+        font-size: 2rem;
         color: $color_blanco;
         text-align: center;
+        font-family: 'Barlow', sans-serif;
     }
 }
 
@@ -89,6 +91,7 @@ justify-content: center;
     border-radius: 15px;
     color: $color_blanco;
     margin-top: 40px;
-    font-size: 24px;
+    font-size: 2rem;
     border: none;
+    font-family: 'Barlow', sans-serif;
 }

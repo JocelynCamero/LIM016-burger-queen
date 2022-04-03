@@ -30,7 +30,7 @@ export default function BarraPrincipal({ vista }) {
           <FontAwesomeIcon
             className="iconoBarraPrincipal"
             icon={icono[0]}
-            size="2x"
+            size="3x"
             color="White"
           />
         </Link>

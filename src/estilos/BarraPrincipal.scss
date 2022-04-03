@@ -8,7 +8,7 @@ $color_anular: #FF7CA3;
 
 .BarraPrincipal{
     width: 7%;
-    height: 834px;
+    height: 100vh;
     background-color: $color_azul_oscuro;
     border-radius: 10px;
     display: flex;
@@ -24,7 +24,7 @@ $color_anular: #FF7CA3;
 .ContenedorIcono{
     align-items: center;
     width: 70%;
-    height: 5%;
+    height: 7%;
     border-radius: 8px;
     display: flex;
     flex-direction: column;

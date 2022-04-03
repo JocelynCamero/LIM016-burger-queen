@@ -16,7 +16,7 @@ $color_anular: #FF7CA3;
 .orden-nombreCliente, .orden-numeroMesa{
     width: 388px;
     height: 30px;
-    font-size: 19px;
+    font-size: 25px;
     font-family: 'Barlow', sans-serif;
     margin-top: 1rem;
     color: $color_blanco;
@@ -32,10 +32,10 @@ $color_anular: #FF7CA3;
     width: 388px;
     margin-top: 30px;
     height: 30px;
-    font-size: 14px;
+    font-size: 25px;
     font-family: 'Barlow', sans-serif;
-    font-weight: 800;
     background-color: #1F1D2B;
     color: $color_blanco;
     border-bottom: 1px solid $color_verde;
+    text-align: center;
 }

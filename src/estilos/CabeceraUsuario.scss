@@ -1,6 +1,14 @@
+// Variables
+$color_azul_oscuro: #1F1D2B;
+$color_azul_claro: #252836;
+$color_verde: #3FAA86;
+$color_placeholder: #ABBBC2;
+$color_blanco: #FFFFFF;
+$color_anular: #FF7CA3;
+
 .CabeceraUsuario{
-    width: auto;
-    height: 65px;
+    width: 86%;
+    height: 12%;
     margin-top: 3rem;
     display: flex;
     flex-direction: row;
@@ -11,12 +19,22 @@
     color: aliceblue;
 }
 
-.fecha{
-    justify-content: flex-start;
+.contenedorUsuarioFecha{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: flex-start;
 }
 
-.nombreUsuario, .fecha{
+.texto{
+    justify-content: flex-start;
     font-family: 'Barlow', sans-serif;
+}
+
+.nombreUsuario{
+    font-family: 'Barlow', sans-serif;
+    font-size: 50px;
+    color: $color_verde;
 }
 
 // .BarraBusqueda {

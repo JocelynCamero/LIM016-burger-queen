@@ -13,8 +13,8 @@ export default function Producto({ producto }) {
         <img className="imgProducto" src={producto.url} alt={producto.nombre} />
       </div>
       <div className="datosProducto">
-        <p className="nombreProducto">{producto.nombre}</p>
-        <p className="precioProducto">{ `S/. ${producto.precio} `}</p>
+        <p className="texto">{producto.nombre}</p>
+        <p className="texto">{ `S/. ${producto.precio} `}</p>
         <button type="button" className="btnAgregar" onClick={() => handleClick(producto)}>Agregar</button>
       </div>
     </div>

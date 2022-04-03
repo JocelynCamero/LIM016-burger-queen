@@ -20,15 +20,15 @@ export default function CabeceraOrden() {
   return (
     <div className="CabeceraOrden">
       <div className="detalleOrdenFecha">
-        <h1 className="numeroOrden">
+        <h1 className="negritaTexto">
           N° orden
         </h1>
-        <h1 className="fecha">
+        <h1 className="texto">
           {orden.numeroOrden}
         </h1>
       </div>
       <div className="contenedorNombreMesero">
-        <h4 className="nombreMesero">
+        <h4 className="texto">
           {usuario}
         </h4>
       </div>

@@ -20,25 +20,37 @@ $color_anular: #FF7CA3;
 
 .ordenMesero{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     width: 100%;
+    align-items: flex-start;
 }
+
+.texto{
+    font-size: 25px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .negrita{
-    color:$color_verde
+    color:$color_verde;
+    font-size: 25px;
+    font-family: "Barlow", sans-serif;
 }
 
 .btnEntregar{
     background-color: $color_verde;
     color: $color_blanco;
     border-radius: 5px;
-    width: 120px;
-    height: 30px;
+    width: 150px;
+    height: 45px;
     border: none;
     margin-top: 15px;
     margin-bottom: 25px;
     font-weight: 500;
-    font-size: 19px;
+    font-size: 25px;
     font-family: 'Barlow', sans-serif;
     text-align: center;
 }
@@ -85,4 +97,10 @@ $color_anular: #FF7CA3;
     justify-content: space-around;
     width:100%;
 
+}
+.cabeceraDatos{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
 }

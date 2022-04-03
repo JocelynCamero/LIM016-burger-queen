@@ -10,32 +10,32 @@ export default function PedidoPendiente({ orden, setActualizandoEstado }) {
     <div className="PedidoPendiente">
       <div className="ContenedorCabecera">
         <div className="PedidoCocinaA">
-          <p className="numeroOrden">
+          <p className="texto">
             <span className="negrita">Orden N°: </span>
             {orden.numeroOrden}
           </p>
-          <p className="nombreCliente">
+          <p className="texto">
             <span className="negrita">Cliente: </span>
             {orden.nombreCliente}
           </p>
-          <p className="nombreMesero">
+          <p className="texto">
             <span className="negrita">Mesero: </span>
             {orden.nombreMesero}
           </p>
         </div>
         <div className="PedidoCocinaB">
-          <p className="hora">
+          <p className="texto">
             <span className="negrita">Fecha Ing:  </span>
             {hIngreso}
           </p>
           {orden.estadoC === 'Preparado'
             ? (
-              <div>
-                <p key={orden.numeroOrden}>
+              <div className="PedidoCocinaB">
+                <p className="texto" key={orden.numeroOrden}>
                   <span className="negrita"> Fecha Fin:</span>
                   {new Date(orden.horaSalida.seconds * 1000).toString().slice(3, -32)}
                 </p>
-                <p className="tiempoDuracion">
+                <p className="texto">
                   <span className="negrita">Duración:  </span>
                   {((orden.horaSalida.seconds - orden.horaIngreso.seconds) / 60).toFixed(0)}
                   {' '}

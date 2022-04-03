@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../estilos/CabeceraUsuario.scss';
 
 function Hora() {
   const [hora, setHora] = useState(new Date().toLocaleString());
@@ -10,7 +11,7 @@ function Hora() {
   });
   return (
     <div>
-      <p>{hora}</p>
+      <p className="texto">{hora}</p>
     </div>
   );
 }

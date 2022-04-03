@@ -7,7 +7,7 @@ export default function ProductoPedidoPendiente({ producto }) {
       <div className="productoDetalle">
         <p className="texto">{producto.nombre}</p>
       </div>
-      <p>{producto.cantidad}</p>
+      <p className="texto">{producto.cantidad}</p>
     </div>
   );
 }
